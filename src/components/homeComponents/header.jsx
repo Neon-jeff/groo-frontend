@@ -31,8 +31,8 @@ export default function Header() {
 
         <div class="  max-sm:h-[550px] w-full relative self-center  p-10 max-sm:p-5  rounded-md flex max-sm:w-screen justify-center">
           <img src={image1} alt="" className="h-full max-sm:w-full w-4/5 object-cover max-sm:object-none" />
-          <HeaderImageCard position={"bottom-0 left-10 max-sm:left-24"} />
-          <HeaderImageCard position={"top-5 right-20 max-sm:right-5 "} />
+          <HeaderImageCard position={"bottom-10 left-10 max-sm:left-[45%]"} />
+          <HeaderImageCard position={"top-5 right-20 max-sm:right-0 max-sm:left-5 "} />
           <HeaderImageCard position={"bottom-24 right-0 max-sm:hidden "} />
         </div>
       </main>

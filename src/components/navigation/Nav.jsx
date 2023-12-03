@@ -36,9 +36,9 @@ export default function Nav() {
         <Button text={"Invest Now"} action={() => {}} width={"w-1/12"} />
       </nav>
       <nav className="hidden max-sm:flex p-5 justify-between flex-col gap-16 fixed top-0 right-0 w-full z-[3]  bg-white items-center">
-        <div className="flex justify-between items-center w-full border-b-2">
+        <div className="flex justify-between items-center w-full ">
           <p className="text-lg font-semibold text-green-500">Groo</p>
-          <label className="btn btn-circle swap swap-rotate bg-transparent border-0">
+          <label className="btn btn-circle swap swap-rotate bg-transparent border-0 shadow-none hover:bg-transparent">
             {/* this hidden checkbox controls the state */}
             <input type="checkbox" />
 

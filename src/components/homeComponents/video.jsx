@@ -14,9 +14,7 @@ export default function Video() {
         <Button width={"w-1/2"} text={"Invest Now"}/>
       </div>
       <iframe
-      className='bg-white rounded-xl w-3/5 max-sm:w-full'
-
-        height="315"
+      className='bg-white rounded-xl w-3/5 max-sm:w-full h-2/3'
         src="https://www.youtube.com/embed/9TXs_0U2758?si=7xEDkx0gpzgepjK3"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
