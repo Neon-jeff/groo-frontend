@@ -71,7 +71,13 @@ export default function Nav() {
             </svg>
           </label>
         </div>
-        <ul className={mobile == true ? "flex gap-10 text-2xl h-screen transition duration-75 ease-in flex-col items-center" : "hidden"}>
+        <ul
+          className={
+            mobile == true
+              ? "flex gap-10 text-2xl h-screen transition w-full duration-75 ease-in flex-col items-center"
+              : "hidden"
+          }
+        >
           <a
             href="#"
             className="hover:text-green-600 hover:font-medium hover:scale-110 transition duration-75 ease-in"
@@ -96,6 +102,7 @@ export default function Nav() {
           >
             Company
           </a>
+          <Button text={"Invest Now"} action={() => {}} width={"w-4/5"} />
         </ul>
       </nav>
     </>
