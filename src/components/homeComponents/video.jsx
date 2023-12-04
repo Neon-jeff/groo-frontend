@@ -3,7 +3,7 @@ import Button from '../buttons/button';
 
 export default function Video() {
   return (
-    <div className="h-screen bg-yellow-50 flex items-center px-10 justify-center gap-20 max-sm:flex-col-reverse max-sm:gap-10">
+    <div className="h-screen bg-yellow-50 max-sm:h-[70vh] flex items-center px-10 justify-center gap-20 max-sm:flex-col-reverse max-sm:gap-10">
       <div className='w-1/3 max-sm:w-full'>
         <h2 className='text-5xl font-medium text-black max-sm:text-3xl'>Why Invest in Real Estate</h2>
         <p>
