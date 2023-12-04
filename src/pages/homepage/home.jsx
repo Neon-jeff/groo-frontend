@@ -3,6 +3,7 @@ import Header from '../../components/homeComponents/header'
 import Nav from '../../components/navigation/Nav';
 import Video from '../../components/homeComponents/video';
 import Problems from '../../components/homeComponents/problems';
+import Features from '../../components/homeComponents/features';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Header />
       <Video/>
       <Problems/>
+      <Features/>
     </>
   );
 }

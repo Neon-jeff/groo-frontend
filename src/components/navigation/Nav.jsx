@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Button from '../buttons/button'
+import ButtonOutiline from '../buttons/buttonOutline';
 
 export default function Nav() {
     let [mobile,setMobile] = useState(false)
@@ -102,7 +103,7 @@ export default function Nav() {
           >
             Company
           </a>
-          <Button text={"Invest Now"} action={() => {}} width={"w-4/5"} />
+          <ButtonOutiline text={"Invest Now"} action={() => {}} width={"w-4/5"} />
         </ul>
       </nav>
     </>
