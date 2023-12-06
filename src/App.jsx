@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <div data-theme='light' className='font-raleway '>
+      <div data-theme='light' className='font-raleway bg-whitesmoke '>
       <Home/>
       </div>
     </>

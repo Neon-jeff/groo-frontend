@@ -4,7 +4,9 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        whitesmoke: "#F5F5F5",
+      },
       fontFamily: {
         workSans: ["Work Sans", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
