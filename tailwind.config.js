@@ -35,11 +35,12 @@ module.exports = {
         primary: "#0d3428",
         secondary: "#ffcf83",
         fill: "#fbfaf3",
+        sub: "#f5f4ee",
       },
       fontFamily: {
         workSans: ["Work Sans", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
-        jakata: ["Plus Jakarta Sans","sans-serif"],
+        jakata: ["Plus Jakarta Sans", "sans-serif"],
       },
     },
     screens: {
