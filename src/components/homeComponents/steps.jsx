@@ -26,7 +26,7 @@ export default function Steps() {
         </div>
 
         {/* Icons Avatar Wrapper Container */}
-        <div className='flex flex-col gap-20 w-1/2 max-sm:w-full max-sm:gap-10'>
+        <div className='flex flex-col gap-20 w-1/2 max-sm:w-4/5 max-sm:items-center max-sm:mx-auto max-sm:gap-5'>
           <StepIcons icon={group} align={'self-start'} />
           <StepIcons icon={logo} align={'self-center'}  />
           <StepIcons icon={home} align={'self-end'}/>
