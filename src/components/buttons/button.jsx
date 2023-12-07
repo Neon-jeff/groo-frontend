@@ -8,8 +8,8 @@ export default function Button({text,width,action}) {
         action();
       }}
     >
-      <div className="absolute top-0 bg-yellow-400 border-2 border-black w-full h-full rounded-md"></div>
-      <div className="bg-green-700 text-white  h-full border-2 border-black  translate-x-2 -translate-y-2 flex items-center justify-center  rounded-md  font-medium">
+      <div className="absolute top-0 bg-black-white-500 border-2 border-black w-full h-full rounded-xl"></div>
+      <div className="bg-saltpan-600 text-white text-xl  h-full border-2 border-black  translate-x-2 -translate-y-2 flex items-center justify-center  rounded-xl  font-medium">
         {text}
       </div>
     </button>

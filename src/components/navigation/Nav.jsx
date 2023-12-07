@@ -6,9 +6,9 @@ export default function Nav() {
     let [mobile,setMobile] = useState(false)
   return (
     <>
-      <nav className="flex fixed items-center border-b-2 py-3 justify-between px-10 top-0 z-[2] bg-white w-full max-sm:hidden">
+      <nav className="flex fixed items-center border-b-2 py-3 justify-between px-10 top-0 z-[2] bg-black-white-50 w-full max-sm:hidden">
         <p className="text-lg font-semibold text-green-500">Groo</p>
-        <ul className="flex gap-10 text-sm">
+        <ul className="flex gap-16 text-xl absolute left-1/2 -translate-x-1/2">
           <a
             href="#"
             className="hover:text-green-600 hover:font-medium hover:scale-110 transition duration-75 ease-in"
@@ -34,7 +34,15 @@ export default function Nav() {
             Company
           </a>
         </ul>
-        <Button text={"Invest Now"} action={() => {}} width={"w-1/12"} />
+        <div className="flex items-center justify-around w-3/12">
+          <a
+            href="#"
+            className="text-green-600 text-xl font-medium hover:scale-110 transition duration-75 ease-in"
+          >
+            Login
+          </a>
+          <Button text={"Invest Now"} action={() => {}} width={"w-6/12"} />
+        </div>
       </nav>
       <nav className="hidden max-sm:flex p-5 justify-between flex-col gap-16 fixed top-0 right-0 w-full z-[3]  bg-white items-center">
         <div className="flex justify-between items-center w-full ">
@@ -103,7 +111,11 @@ export default function Nav() {
           >
             Company
           </a>
-          <ButtonOutiline text={"Invest Now"} action={() => {}} width={"w-4/5"} />
+          <ButtonOutiline
+            text={"Invest Now"}
+            action={() => {}}
+            width={"w-4/5"}
+          />
         </ul>
       </nav>
     </>

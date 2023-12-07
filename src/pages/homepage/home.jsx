@@ -4,6 +4,7 @@ import Nav from '../../components/navigation/Nav';
 import Video from '../../components/homeComponents/video';
 import Problems from '../../components/homeComponents/problems';
 import Features from '../../components/homeComponents/features';
+import Steps from '../../components/homeComponents/steps';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Video/>
       <Problems/>
       <Features/>
+      <Steps/>
     </>
   );
 }
