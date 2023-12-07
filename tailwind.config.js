@@ -32,10 +32,14 @@ module.exports = {
           900: "#7c5c12",
           950: "#432f07",
         },
+        primary: "#0d3428",
+        secondary: "#ffcf83",
+        fill: "#fbfaf3",
       },
       fontFamily: {
         workSans: ["Work Sans", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
+        jakata: ["Plus Jakarta Sans","sans-serif"],
       },
     },
     screens: {
