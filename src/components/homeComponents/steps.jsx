@@ -14,7 +14,7 @@ export default function Steps() {
     offset:["start end","0.9 1"]
   })
   let scaleTransform=useTransform(scrollYProgress,[0,0.5,1],[0.9,1,1])
-   let borderTransform = useTransform(scrollYProgress, [0, 0.5,0.6, 1], ["100px", "50px","0px", "0px"]);
+   let borderTransform = useTransform(scrollYProgress, [0, 0.4,0.5, 1], ["50px", "20px","0px", "0px"]);
   return (
     <motion.div
       onClick={() => {
@@ -60,7 +60,7 @@ export default function Steps() {
       </div>
       {/* steps progress wrapper */}
 
-      <div className="text-sub flex flex-col gap-16">
+      <div className="text-sub flex flex-col gap-16 mt-10">
         <StepProgress
           stepHeader={"Invest with as small as $200"}
           stepNo={"1"}

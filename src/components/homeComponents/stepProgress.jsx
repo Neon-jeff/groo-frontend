@@ -20,9 +20,9 @@ export default function StepProgress({ stepNo, stepText,stepHeader,progress }) {
       }}
       className="flex gap-10 items-center h-56 max-sm:h-full max-sm:gap-5 max-sm:flex-col "
     >
-      <p className="text-2xl text-secondary">{stepNo}</p>
+      <p className="text-2xl text-secondary max-sm:self-start">{stepNo}</p>
       <div>
-        <h1 className="text-4xl font-medium text-secondary">{stepHeader}</h1>
+        <h1 className="text-4xl max-sm:text-xl font-medium text-secondary">{stepHeader}</h1>
         <p className="text-xl w-1/2 max-sm:w-full mt-5">{stepText}</p>
         <button className="text-secondary text-xl pt-10">Learn More </button>
       </div>
