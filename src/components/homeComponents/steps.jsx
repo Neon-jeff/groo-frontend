@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import {m, motion,useScroll} from 'framer-motion'
+import {m, motion,useScroll, useTransform} from 'framer-motion'
 import Button from '../buttons/button';
 import StepIcons from './stepIcons';
 import group from '../../assets/icons/group.png'
@@ -7,16 +7,19 @@ import home from '../../assets/icons/home.png'
 import ButtonSecondary from '../buttons/buttonSecondary';
 import logo from '../../assets/icons/letter-g.png'
 export default function Steps() {
-  let stepRef=useRef()
-  useScroll({
+  let stepRef=useRef(null)
+  const {scrollYProgress}=useScroll({
     target:stepRef,
-    offset:["0.5 1","1.2"]
+    offset:["0.5 1","0.9 1"]
   })
+  let scaleTransform=useTransform(scrollYProgress,[0,1],[0.5,1])
   return (
     <motion.div
-      whileInView={{ width: "100%", borderRadius: "0px" }}
-      initial={{ width: "80%", borderRadius: "100px" }}
-      transition={{ duration: 1 }}
+    style={{
+      scale:scaleTransform,
+      borderRadius:scrollYProgress
+    }}
+    ref={stepRef}
       className=" bg-primary h-full mx-auto p-20 max-sm:p-10"
     >
       <div className=" flex justify-center gap-0 max-sm:flex-col max-sm:gap-10">
