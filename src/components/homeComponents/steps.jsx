@@ -12,7 +12,7 @@ export default function Steps() {
     target:stepRef,
     offset:["0.5 1","0.9 1"]
   })
-  let scaleTransform=useTransform(scrollYProgress,[0,1],[0.5,1])
+  let scaleTransform=useTransform(scrollYProgress,[0,1],[0.8,1])
   return (
     <motion.div
     style={{
