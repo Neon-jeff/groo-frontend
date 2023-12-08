@@ -6,28 +6,33 @@ import group from '../../assets/icons/group.png'
 import home from '../../assets/icons/home.png'
 import ButtonSecondary from '../buttons/buttonSecondary';
 import logo from '../../assets/icons/letter-g.png'
+import StepProgress from './stepProgress';
 export default function Steps() {
   let stepRef=useRef(null)
   const {scrollYProgress}=useScroll({
     target:stepRef,
-    offset:["0.5 1","0.9 1"]
+    offset:["start end","0.9 1"]
   })
-  let scaleTransform=useTransform(scrollYProgress,[0,1],[0.8,1])
+  let scaleTransform=useTransform(scrollYProgress,[0,0.5,1],[0.9,1,1])
+   let borderTransform = useTransform(scrollYProgress, [0, 0.5,0.6, 1], ["100px", "50px","0px", "0px"]);
   return (
     <motion.div
-    style={{
-      scale:scaleTransform,
-      borderRadius:scrollYProgress
-    }}
-    ref={stepRef}
-      className=" bg-primary h-full mx-auto p-20 max-sm:p-10"
+      onClick={() => {
+        console.log(scaleTransform);
+      }}
+      style={{
+        scaleX: scaleTransform,
+        borderRadius: borderTransform,
+      }}
+      ref={stepRef}
+      className=" bg-primary  mx-auto p-20 max-sm:p-10"
     >
       <div className=" flex justify-center gap-0 max-sm:flex-col max-sm:gap-10">
         {/* Sub Hero Text  */}
         <div className="w-1/2 max-sm:w-full">
           <h1 className="text-4xl pb-10 font-semibold text-white w-3/4 max-sm:text-2xl max-sm:pb-5 max-sm:w-full">
-            A <span className="text-black-white-300">Duo-Profit</span> ecosystem
-            that creates partnership, not tenancy
+            A <span className="text-secondary">Duo-Profit</span> ecosystem that
+            creates partnership, not tenancy
           </h1>
 
           <ButtonSecondary
@@ -52,6 +57,34 @@ export default function Steps() {
           <StepIcons icon={logo} align={"self-center"} />
           <StepIcons icon={home} align={"self-end"} />
         </div>
+      </div>
+      {/* steps progress wrapper */}
+
+      <div className="text-sub flex flex-col gap-16">
+        <StepProgress
+          stepHeader={"Invest with as small as $200"}
+          stepNo={"1"}
+          stepText={
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nesciunt quae voluptas fugiat obcaecati, error recusandae labore sint repellendus minus earum sed porro inventore nisi at laboriosam dolores placeat ipsum?"
+          }
+          progress={[0.1, 0.5, 1, 0.2]}
+        />
+        <StepProgress
+          stepHeader={"Invest with as small as $200"}
+          stepNo={"2"}
+          stepText={
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nesciunt quae voluptas fugiat obcaecati, error recusandae labore sint repellendus minus earum sed porro inventore nisi at laboriosam dolores placeat ipsum?"
+          }
+          progress={[0.1, 0.5, 1, 0.2]}
+        />
+        <StepProgress
+          stepHeader={"Invest with as small as $200"}
+          stepNo={"3"}
+          stepText={
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nesciunt quae voluptas fugiat obcaecati, error recusandae labore sint repellendus minus earum sed porro inventore nisi at laboriosam dolores placeat ipsum?"
+          }
+          progress={[0.1, 0.5, 1, 1]}
+        />
       </div>
     </motion.div>
   );
