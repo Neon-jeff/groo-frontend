@@ -13,7 +13,7 @@ export default function Reviews() {
           What our owners and residents say
         </h1>
         {/* reviews card container Bento grids patterns */}
-        <div className="grid grid-cols-2  mx-auto w-4/5 max-sm:w-full max-sm:grid-cols-1 gap-y-20">
+        <div className="grid grid-cols-2  mx-auto w-4/5 max-sm:w-full max-sm:grid-cols-1 gap-20">
           <Reviewscard
             img={img1}
             span={"col-span-2 max-sm:col-span-1"}
