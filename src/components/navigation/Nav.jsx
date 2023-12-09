@@ -7,7 +7,7 @@ export default function Nav() {
   return (
     <>
       <nav className="flex fixed items-center border-b-2 border-black py-3 justify-between px-10 top-0 z-[2] bg-fill w-full max-sm:hidden">
-        <p className="text-lg font-semibold text-green-500">Groo</p>
+        <p className="text-lg font-semibold text-primary">Groo</p>
         <ul className="flex gap-16 text-xl absolute left-1/2 -translate-x-1/2">
           <a
             href="#"

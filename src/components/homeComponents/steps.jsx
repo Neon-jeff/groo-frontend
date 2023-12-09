@@ -25,7 +25,7 @@ export default function Steps() {
         borderRadius: borderTransform,
       }}
       ref={stepRef}
-      className=" bg-primary  mx-auto p-20 max-sm:p-10"
+      className=" bg-primary  mx-auto p-20 max-sm:p-10 "
     >
       <div className=" flex justify-center gap-0 max-sm:flex-col max-sm:gap-10">
         {/* Sub Hero Text  */}
@@ -70,7 +70,7 @@ export default function Steps() {
           progress={[0.1, 0.5, 1, 0.2]}
         />
         <StepProgress
-          stepHeader={"Invest with as small as $200"}
+          stepHeader={"Residents participates in the \"Live Like You Own it\" Program"}
           stepNo={"2"}
           stepText={
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nesciunt quae voluptas fugiat obcaecati, error recusandae labore sint repellendus minus earum sed porro inventore nisi at laboriosam dolores placeat ipsum?"
@@ -78,7 +78,7 @@ export default function Steps() {
           progress={[0.1, 0.5, 1, 0.2]}
         />
         <StepProgress
-          stepHeader={"Invest with as small as $200"}
+          stepHeader={"Start Creating Wealth"}
           stepNo={"3"}
           stepText={
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nesciunt quae voluptas fugiat obcaecati, error recusandae labore sint repellendus minus earum sed porro inventore nisi at laboriosam dolores placeat ipsum?"
