@@ -20,18 +20,21 @@ export default function Reviews() {
             text={
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eaque voluptatum at, earum vel suscipit"
             }
+            user={{ name: "Maya Daniels", status: "Resident",heading:"Attractive House Planning" }}
           />
           <Reviewscard
             img={img2}
             text={
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eaque voluptatum at, earum vel suscipit"
             }
+            user={{ name: "Mark Jones", status: "Investor",heading:"Flexible Payment Method" }}
           />
           <Reviewscard
             img={img3}
             text={
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eaque voluptatum at, earum vel suscipit"
             }
+            user={{ name: "Jane Collins", status: "Investor",heading:"Futuristic Investment" }}
           />
         </div>
       </div>

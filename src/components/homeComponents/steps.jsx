@@ -25,7 +25,7 @@ export default function Steps() {
         borderRadius: borderTransform,
       }}
       ref={stepRef}
-      className=" bg-primary  mx-auto p-20 max-sm:p-10 "
+      className=" bg-primary  mx-auto p-20 max-sm:p-10 mt-20  "
     >
       <div className=" flex justify-center gap-0 max-sm:flex-col max-sm:gap-10">
         {/* Sub Hero Text  */}

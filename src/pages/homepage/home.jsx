@@ -7,6 +7,8 @@ import Features from '../../components/homeComponents/features';
 import Steps from '../../components/homeComponents/steps';
 import Benefits from '../../components/homeComponents/benefits';
 import Reviews from '../../components/homeComponents/reviews';
+import Faq from '../../components/homeComponents/faqs';
+import Stats from '../../components/homeComponents/stats';
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
       <Steps/>
       <Benefits/>
       <Reviews/>
+      <Faq/>
+      <Stats/>
     </div>
   );
 }

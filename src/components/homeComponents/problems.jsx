@@ -6,7 +6,7 @@ export default function Problems() {
   return (
     <div className="bg-sub border-t-2 border-b-2 border-black flex w-full flex-row-reverse py-20 items-center justify-center max-sm:flex-col max-sm:gap-10 px-5  ">
       <div className="w-1/3 max-sm:w-full">
-        <h1 className="text-5xl max-sm:text-3xl font-medium self-start ">
+        <h1 className="text-5xl max-sm:text-3xl pb-6 font-medium self-start ">
           Has investing in Real Estate become difficult
         </h1>
         <p>

@@ -6,7 +6,7 @@ export default function FeatureCard({text}) {
       className={`h-72  relative w-1/4 max-sm:w-full  hover:scale-105 transition duration-100 ease-in `}
     >
       <div className="absolute bg-sub border-2 border-black w-full  h-full rounded-md"></div>
-      <div className="bg-fill text-[.9rem] w-full p-5 h-full border-2 border-black  translate-x-2 -translate-y-2 flex items-center justify-center  rounded-md font-medium">
+      <div className="bg-fill text-lg w-full p-5 h-full border-2 border-black  translate-x-2 -translate-y-2 flex items-center justify-center  rounded-md font-medium">
         {text}
       </div>
     </div>
