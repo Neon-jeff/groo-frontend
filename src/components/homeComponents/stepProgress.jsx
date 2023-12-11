@@ -22,7 +22,7 @@ export default function StepProgress({ stepNo, stepText,stepHeader,progress }) {
     >
       <p className="text-2xl text-secondary max-sm:self-start">{stepNo}</p>
       <div>
-        <h1 className="text-4xl max-sm:text-xl font-medium text-secondary">{stepHeader}</h1>
+        <h1 className="text-3xl w-1/2 max-sm:w-full max-sm:text-xl font-medium text-secondary">{stepHeader}</h1>
         <p className="text-xl w-1/2 max-sm:w-full mt-5">{stepText}</p>
         <button className="text-secondary text-xl pt-10">Learn More </button>
       </div>

@@ -9,6 +9,7 @@ import Benefits from '../../components/homeComponents/benefits';
 import Reviews from '../../components/homeComponents/reviews';
 import Faq from '../../components/homeComponents/faqs';
 import Stats from '../../components/homeComponents/stats';
+import Footer from '../../components/navigation/footer';
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Reviews/>
       <Faq/>
       <Stats/>
+      <Footer/>
     </div>
   );
 }

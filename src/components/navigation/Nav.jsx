@@ -6,9 +6,9 @@ export default function Nav() {
     let [mobile,setMobile] = useState(false)
   return (
     <>
-      <nav className="flex fixed items-center border-b-2 border-black py-3 justify-between px-10 top-0 z-[2] bg-fill w-full max-sm:hidden">
+      <nav className="flex fixed items-center border-b-[1px] border-black py-3 justify-between px-10 top-0 z-[2] bg-fill w-full max-sm:hidden">
         <p className="text-lg font-semibold text-primary">Groo</p>
-        <ul className="flex gap-16 text-xl absolute left-1/2 -translate-x-1/2">
+        <ul className="flex gap-16 text-lg absolute left-1/2 -translate-x-1/2">
           <a
             href="#"
             className="hover:text-green-600 hover:font-medium hover:scale-110 transition duration-75 ease-in"

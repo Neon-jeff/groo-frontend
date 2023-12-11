@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <div data-theme='light' className='font-jakata text-lg bg-fill overflow-x-hidden w-screen '>
+      <div data-theme='light' className='font-jakata text-md bg-fill overflow-x-hidden w-screen '>
       <Home/>
       </div>
     </>

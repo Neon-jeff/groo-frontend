@@ -5,7 +5,7 @@ export default function Video() {
   return (
     <div className="h-screen bg-black-white-50 max-sm:h-[70vh] flex flex-row-reverse items-center px-10 justify-center gap-20 max-sm:flex-col-reverse max-sm:gap-10">
       <div className='w-1/3 max-sm:w-full'>
-        <h2 className='text-5xl font-medium text-black max-sm:text-3xl'>Why Invest in Real Estate</h2>
+        <h2 className='text-5xl font-semibold text-black max-sm:text-3xl'>Why Invest in Real Estate</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non,
           voluptates! Quidem, rerum dolore. Quia maiores nisi veniam eveniet

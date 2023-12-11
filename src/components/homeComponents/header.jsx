@@ -8,7 +8,7 @@ import HeaderImageCard from './headerImageCard';
 export default function Header() {
   return (
     <>
-      <main className="pt-28 px-20 items-center h-screen   max-sm:h-full w-screen gap-10 flex max-ss:flex-col  ">
+      <main className="mt-36 px-20 items-center h-screen   max-sm:h-full w-screen gap-10 flex max-ss:flex-col  ">
         <div className="w-1/2 self-center max-sm:w-screen max-sm:px-3 mt-10 flex flex-col gap-5 ">
           <h1 className="text-6xl max-sm:text-4xl font-medium font-workSans">
             Real Estate investment made easier with{" "}
