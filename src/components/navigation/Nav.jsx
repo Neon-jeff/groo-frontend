@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import Button from '../buttons/button'
 import ButtonOutiline from '../buttons/buttonOutline';
+import logo from '../../assets/icons/logoSmall.png'
 
 export default function Nav() {
     let [mobile,setMobile] = useState(false)
   return (
     <>
       <nav className="flex fixed items-center border-b-[1px] border-black py-3 justify-between px-10 top-0 z-[2] bg-fill w-full max-sm:hidden">
-        <p className="text-lg font-semibold text-primary">Groo</p>
+        <img src={logo} alt="" />
         <ul className="flex gap-16 text-lg absolute left-1/2 -translate-x-1/2">
           <a
             href="#"
@@ -41,7 +42,7 @@ export default function Nav() {
           >
             Login
           </a>
-          <Button text={"Invest Now"} action={() => {}} width={"w-6/12"} />
+          <Button text={"Invest Now"} width={"w-6/12"} />
         </div>
       </nav>
       <nav className="hidden max-sm:flex p-5 justify-between flex-col backdrop-blur-lg backdrop-opacity-60 gap-16 fixed top-0 right-0 w-full z-[3]  bg-fill items-center">

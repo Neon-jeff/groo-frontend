@@ -1,11 +1,16 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function Button({text,width,action}) {
+  let navigate=useNavigate()
   return (
     <button
       className={`${width} relative mt-5  h-16 hover:scale-95 transition duration-100 ease-in `}
       onClick={() => {
-        action();
+        if(!action){
+          navigate("/login")
+        }
+        action()
       }}
     >
       <div className="absolute top-0 bg-secondary border-[1px] border-black w-full h-full rounded-xl"></div>

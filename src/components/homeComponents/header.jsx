@@ -24,9 +24,6 @@ export default function Header() {
           <Button
             text={"Get Started"}
             width={"w-1/2"}
-            action={() => {
-              console.log("Hello Pricsy");
-            }}
           />
         </div>
 
