@@ -6,7 +6,7 @@ import logo from "../../assets/icons/logoSmall.png";
 
 export default function Login() {
   return (
-    <div className=" p-10">
+    <div className=" p-10 h-screen">
 
       {/* form-container */}
       <div className="mx-auto w-1/3 flex flex-col items-center text-sm max-sm:w-full ">
