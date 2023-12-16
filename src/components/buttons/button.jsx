@@ -8,7 +8,7 @@ export default function Button({text,width,action}) {
       className={`${width} relative mt-5  h-16 hover:scale-95 transition duration-100 ease-in `}
       onClick={() => {
         if(!action){
-          navigate("/login")
+          navigate("users/login")
         }
         action()
       }}

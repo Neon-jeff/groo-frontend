@@ -15,7 +15,7 @@ export default function Login() {
           Welcome Back!
         </h2>
         <p>
-          Don't have an account? <Link>Sign Up</Link>
+          Don't have an account? <Link to={'/signup'} className='text-lime-600'>Sign Up</Link>
         </p>
         <form action="" method="post" className="w-full pt-5">
           {/* Names container */}

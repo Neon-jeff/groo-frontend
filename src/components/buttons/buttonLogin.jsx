@@ -12,7 +12,7 @@ export default function ButtonAuth({
         action();
       }}
     >
-      <div className="absolute top-0 bg-primary flex justify-center items-center text-white border-[1px] border-black w-full h-full rounded-xl">
+      <div className="absolute top-0 bg-primary flex justify-center items-center text-white  w-full h-full rounded-xl">
         {text}
       </div>
     </button>
