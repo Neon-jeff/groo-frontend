@@ -1,5 +1,6 @@
 import React from 'react'
 import ProfileCard from './profileCard'
+import ButtonDBoard from '../buttons/buttonDashboard';
 
 export default function Aside() {
   return (
@@ -23,6 +24,7 @@ export default function Aside() {
           <button className="w-1/2 bg-saltpan-300 p-2 rounded-md">Start</button>
         </div>
       </div>
+      <ButtonDBoard width="w-full max-sm:w-1/2" />
     </div>
   );
 }

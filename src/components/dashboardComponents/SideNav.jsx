@@ -12,7 +12,7 @@ export default function SideNav() {
           size: 30,
         };
   return (
-    <div className=" max-sm:hidden py-10 px-5 text-sm bg-primary w-2/12 text-white flex flex-col justify-evenly items-center">
+    <div className=" max-sm:hidden max-sm:top-0 max-sm:h-full max-sm:z-[1] max-sm:fixed max-sm:w-4/5 py-10 px-5 text-sm bg-primary w-2/12 text-white flex flex-col justify-evenly items-center">
       <p>LOGO</p>
       {/* Nav Element */}
       <ul className="text-white flex flex-col gap-8 w-full">
