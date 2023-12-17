@@ -22,7 +22,7 @@ export default function SignUp() {
         <form action="" method="post" className="w-full pt-5">
           {/* Names container */}
           <div className="w-full flex flex-col gap-3">
-            <div className="flex gap-10 max-sm:flex-col max-sm:gap-5">
+            <div className="flex gap-10  max-sm:gap-5">
               <FieldSet label={"First Name"} type={"text"} name={"fname"} />
               <FieldSet label={"Last Name"} type={"text"} name={"lname"} />
             </div>

@@ -7,7 +7,7 @@ export default function FieldSet({label,name,type}) {
             <label htmlFor="input">
                 {label}
             </label>
-            <input type={type} required className='border-[1px] bg-white rounded-md p-3' name={name} />
+            <input type={type} required className='border-[1px] bg-white rounded-md p-3 w-full' name={name} />
         </fieldset>
     </div>
   )

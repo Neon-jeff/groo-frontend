@@ -39,7 +39,7 @@ export default function AccountType() {
           tempora?
         </p>
       </p>
-      <button className="text-black z-[1] bg-sub w-1/4 max-sm:w-1/2 p-5 rounded-md ">
+      <button className="text-black z-[1] bg-secondary w-1/4 max-sm:w-1/2 p-5 rounded-md ">
         Proceed
       </button>
     </div>

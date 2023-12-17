@@ -7,6 +7,7 @@ import SignUp from "./pages/authpages/signup";
 import AuthContextProvider from "./data/aurhContext";
 import Dashboard from "./pages/dashboard/dashboard";
 import AccountType from "./pages/profileUpdate/accountType";
+import Contact from "./pages/profileUpdate/contact";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,7 +27,7 @@ function App() {
               <Route path="users/signup" Component={SignUp} />
               <Route path="users/dashboard" Component={Dashboard}/>
               <Route path="users/verify/account-type" Component={AccountType}/>
-              
+              <Route path="users/verify/contact" Component={Contact}/>
             </Routes>
           </AuthContextProvider>
         </BrowserRouter>
