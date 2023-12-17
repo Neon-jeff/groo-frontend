@@ -4,7 +4,7 @@ import ButtonDBoard from '../buttons/buttonDashboard';
 
 export default function Aside() {
   return (
-    <div className="border-l-2 max-sm:hidden border-gray-200 p-10 bg-sub w-3/12 flex flex-col gap-10 items-center">
+    <div className="border-l-2 max-sm:hidden border-gray-100  p-10  w-3/12 flex flex-col gap-10 items-center">
       <ProfileCard />
       <div className="w-full flex flex-col gap-5">
         <h1 className="text-xl font-semibold">Your Account Status</h1>
