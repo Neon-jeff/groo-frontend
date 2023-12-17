@@ -6,6 +6,7 @@ import Login from "./pages/authpages/login";
 import SignUp from "./pages/authpages/signup";
 import AuthContextProvider from "./data/aurhContext";
 import Dashboard from "./pages/dashboard/dashboard";
+import AccountType from "./pages/profileUpdate/accountType";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,6 +25,8 @@ function App() {
               <Route path="users/login" Component={Login} />
               <Route path="users/signup" Component={SignUp} />
               <Route path="users/dashboard" Component={Dashboard}/>
+              <Route path="users/verify/account-type" Component={AccountType}/>
+              
             </Routes>
           </AuthContextProvider>
         </BrowserRouter>

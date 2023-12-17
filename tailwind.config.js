@@ -36,6 +36,7 @@ module.exports = {
         secondary: "#ffcf83",
         fill: "#fbfaf3",
         sub: "#f5f4ee",
+        dash: "#f8f9fa",
       },
       fontFamily: {
         workSans: ["Work Sans", "sans-serif"],
@@ -55,7 +56,6 @@ module.exports = {
   },
   daisyui: {
     themes: ["light", "dark", "cupcake"],
-    
   },
   plugins: [require("daisyui")],
 };
