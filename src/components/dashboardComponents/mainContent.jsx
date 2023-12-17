@@ -13,15 +13,18 @@ export default function MainContent({showMobile,mobile}) {
     <div className=" w-7/12 px-10 py-6 max-sm:px-5 max-sm:w-full mt-20 ">
       {/* Investment Status */}
       <div className="flex flex-col gap-5">
-        <AiFillAppstore
-          className="self-end sm:hidden"
-          size={40}
-          color=""
-          onClick={() => {
-            showMobile(!mobile);
-          }}
-        />
-        <h1 className="text-xl font-semibold">Recent Investment</h1>
+        <div className='flex justify-between items-center'>
+          <p className='text-2xl font-medium'>Welcome, Jeff Jones</p>
+          <AiFillAppstore
+            className="self-end sm:hidden"
+            size={40}
+            color=""
+            onClick={() => {
+              showMobile(!mobile);
+            }}
+          />
+        </div>
+        <h1 className="text-xl max-sm:text-lg font-semibold">Recent Investment</h1>
         <div className=" rounded-md flex justify-between text-sm gap-5 max-sm:grid max-sm:grid-cols-2 max-sm:gap-5 ">
           <p className="flex flex-col gap-1 shadow-md lg:w-1/4  justify-center bg-white p-5  rounded-lg ">
             <img src={capital} className="w-[40px]" alt="" />
@@ -53,7 +56,7 @@ export default function MainContent({showMobile,mobile}) {
 
       {/* Investment Calculator */}
       <div className="mt-10">
-        <h1 className="text-xl font-semibold pb-5 flex items-center gap-2  ">
+        <h1 className="text-xl max-sm:text-lg font-semibold pb-5 flex items-center gap-2  ">
           <GrGrow size={30} color="#0d3428" />
           Growth Machine
         </h1>
