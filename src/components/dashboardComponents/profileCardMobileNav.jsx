@@ -4,14 +4,14 @@ import { BsThreeDots } from "react-icons/bs";
 
 export default function ProfileCardMobileNav() {
   return (
-    <div className="bg-secondary flex justify-between items-center p-3 w-1/3 rounded-full ">
-      <p className="flex items-center gap-2 text-sm">
-        <BsPersonCircle size={25} color="#0d3428" />
+    <div className="bg-primary flex justify-between items-center p-3 w-1/3 rounded-full ">
+      <p className="flex items-center gap-2 text-sm text-secondary">
+        <BsPersonCircle size={25} color="white" />
         Jeff
       </p>
       <div className="dropdown dropdown-bottom dropdown-end">
         <div tabIndex={0} role="button" className=" m-1">
-          <BsThreeDots />
+          <BsThreeDots color='white' />
         </div>
         <ul
           tabIndex={0}
