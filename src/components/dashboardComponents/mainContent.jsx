@@ -23,24 +23,24 @@ export default function MainContent({showMobile,mobile}) {
         />
         <h1 className="text-xl font-semibold">Recent Investment</h1>
         <div className=" rounded-md flex justify-between text-sm gap-5 max-sm:grid max-sm:grid-cols-2 max-sm:gap-5 ">
-          <p className="flex flex-col gap-1 shadow-md lg:w-1/4  justify-center bg-lime-100 p-5  rounded-lg ">
+          <p className="flex flex-col gap-1 shadow-md lg:w-1/4  justify-center bg-white p-5  rounded-lg ">
             <img src={capital} className="w-[40px]" alt="" />
             Initial Investment{" "}
             <span className="text-md font-semibold text-lime-600 ">$500</span>
           </p>
-          <p className="flex flex-col gap-1  p-5 justify-center lg:w-1/4  rounded-lg shadow-md bg-sky-100">
+          <p className="flex flex-col gap-1  p-5 justify-center lg:w-1/4  rounded-lg shadow-md bg-white">
             <img src={recurring} className="w-[40px]" alt="" />
             Monthly Payment{" "}
             <span className="text-md font-semibold text-sky-600 ">$3000</span>
           </p>
-          <p className="flex flex-col gap-1 justify-center p-5 lg:w-1/4 rounded-lg shadow-md bg-yellow-100">
+          <p className="flex flex-col gap-1 justify-center p-5 lg:w-1/4 rounded-lg shadow-md bg-white">
             <img src={time} className="w-[40px]" alt="" />
             Duration{" "}
             <span className="text-md font-semibold text-yellow-600">
               19months
             </span>
           </p>
-          <p className="flex flex-col gap-1 p-5 justify-center lg:w-1/4 rounded-lg shadow-md bg-saltpan-100">
+          <p className="flex flex-col gap-1 p-5 justify-center lg:w-1/4 rounded-lg shadow-md bg-white">
             <img src={profit} className="w-[40px]" alt="" />
             Expected Income{" "}
             <span className="text-md font-semibold text-green-600">$16000</span>
