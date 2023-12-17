@@ -10,6 +10,8 @@ import { RiApps2Line } from "react-icons/ri";
 import { IoCloseOutline } from "react-icons/io5";
 import { LuMenu } from "react-icons/lu";
 import { easeIn, easeOut, motion,AnimatePresence } from "framer-motion";
+import ProfileCard from "./profileCard";
+import ProfileCardMobileNav from "./profileCardMobileNav";
 
 export default function SideNavMobile() {
   let [mNav, setMNav] = useState(false);
@@ -20,7 +22,6 @@ export default function SideNavMobile() {
     <div className=" lg:w-2/12 lg:hidden">
       {/* mobile Nav */}
       <div className="border-b-[.5px] bg-sub border-black items-center w-full md:hidden fixed top-0 p-5 flex justify-between">
-        <p className="font-semibold text-lime-500">Stem</p>
         <LuMenu
           {...iconProps}
           onClick={() => {
@@ -28,11 +29,13 @@ export default function SideNavMobile() {
           }}
         />
 
+          <ProfileCardMobileNav/>
+
       </div>
       {mNav && (
-        <AnimatePresence >
+        <AnimatePresence>
           <motion.div
-          key="mobile"
+            key="mobile"
             initial={{
               x: -1000,
             }}
@@ -41,7 +44,7 @@ export default function SideNavMobile() {
             }}
             transition={{
               ease: easeOut,
-              duration: .3,
+              duration: 0.3,
             }}
             exit={{
               x: 1000,

@@ -10,11 +10,11 @@ import profit from '../../assets/icons/financial-profit.png'
 
 export default function MainContent({showMobile,mobile}) {
   return (
-    <div className=" w-7/12 px-10 py-6 max-sm:px-5 max-sm:w-full mt-20 ">
+    <div className=" w-7/12 px-10 py-6 max-sm:px-5 max-sm:w-full mt-28 ">
       {/* Investment Status */}
       <div className="flex flex-col gap-5">
         <div className='flex justify-between items-center'>
-          <p className='text-2xl font-medium'>Welcome, Jeff Jones</p>
+          <p className='text-2xl font-medium'>Welcome, Jeff</p>
           <AiFillAppstore
             className="self-end sm:hidden"
             size={40}
@@ -25,7 +25,7 @@ export default function MainContent({showMobile,mobile}) {
           />
         </div>
         <h1 className="text-xl max-sm:text-lg font-semibold">Recent Investment</h1>
-        <div className=" rounded-md flex justify-between text-sm gap-5 max-sm:grid max-sm:grid-cols-2 max-sm:gap-5 ">
+        <div className=" rounded-md flex justify-between max-sm:text-[.9rem] text-sm gap-5 max-sm:grid max-sm:grid-cols-2 max-sm:gap-5 ">
           <p className="flex flex-col gap-1 shadow-md lg:w-1/4  justify-center bg-white p-5  rounded-lg ">
             <img src={capital} className="w-[40px]" alt="" />
             Initial Investment{" "}
