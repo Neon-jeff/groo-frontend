@@ -8,7 +8,7 @@ import AsideMobile from '../../components/dashboardComponents/AsideMobile'
 export default function () {
   let [showAside,setShowAside] =useState(false)
   return (
-    <div className='h-full bg-sub flex overflow-x-hidden'>
+    <div className='h-full bg-dash flex overflow-x-hidden'>
         <SideNavMobile/>
         <SideNav/>
         <MainContent showMobile={setShowAside} mobile={showAside}/>
