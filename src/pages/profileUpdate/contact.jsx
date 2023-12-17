@@ -18,7 +18,7 @@ export default function Contact() {
         <form
           action=""
           method="post"
-          className="z-[1] w-full lg:w-1/3 lg:grid lg:grid-cols-2 grid grid-cols-2 gap-3 lg:p-10 bg-dash p-5 rounded-md shadow-lg "
+          className="z-[1] w-full lg:w-1/3 lg:grid lg:grid-cols-2 grid grid-cols-2 gap-3 lg:p-10 bg-fill p-5 rounded-md shadow-lg "
         >
           <FieldSet label={"Phone"} type={"tel"} name={"phone"} />
           <FieldSet label={"Alternate Phone"} type={"tel"} name={"phone"} />
