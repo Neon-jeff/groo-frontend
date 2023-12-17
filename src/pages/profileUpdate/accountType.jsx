@@ -5,9 +5,9 @@ import FeatureCard from '../../components/homeComponents/featureCard'
 export default function AccountType() {
   return (
     <div className=" flex flex-col gap-10 items-center justify-center text-sm pb-10 bg-[#f8f9fa] ">
-      <div className="fixed left-0 bottom-0 w-full bg-primary h-1/2 max-sm:h-3/5 "></div>
-      <div className=" p-10 shadow-lg w-full max-sm:p-5 justify-center flex text-center">
-        <p className="absolute left-5">Logo</p>
+      <div className="fixed left-0 bottom-0 w-full bg-primary h-1/2 max-sm:h-1/2 "></div>
+      <div className=" p-10 shadow-lg w-full max-sm:px-5 justify-center flex flex-col max-sm:gap-5 text-center">
+        <p className="absolute left-5 max-sm:static">Logo</p>
         <div>
           <h1 className="text-2xl font-semibold pb-3 max-sm:pb-0">
             Select account type
