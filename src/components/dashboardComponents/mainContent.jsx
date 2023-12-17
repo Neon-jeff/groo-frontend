@@ -2,13 +2,15 @@ import React from 'react'
 import Calculator from './Calculator';
 import ButtonDBoard from '../buttons/buttonDashboard';
 import { GrGrow } from "react-icons/gr";
+import { AiFillAppstore } from "react-icons/ai";
 
-export default function MainContent() {
+export default function MainContent({showMobile,mobile}) {
   return (
     <div className=" w-7/12 px-10 py-6 max-sm:px-5 max-sm:w-full mt-20 ">
       {/* Investment Status */}
-      <div className="flex flex-col gap-3">
-        <h1 className="text-xl font-semibold ">Recent Investment</h1>
+      <div className="flex flex-col gap-5">
+        <AiFillAppstore className='self-end sm:hidden' size={40} color='green' onClick={()=>{showMobile(!mobile)}}/>
+        <h1 className="text-xl font-semibold">Recent Investment</h1>
         <div className="bg-white p-5 rounded-md flex justify-between text-sm max-sm:grid max-sm:grid-cols-2 max-sm:gap-5 ">
           <p className="flex flex-col gap-1 shadow-md  justify-center bg-lime-50 p-5  rounded-lg ">
             Initial Investment{" "}
@@ -27,13 +29,13 @@ export default function MainContent() {
             <span className="text-md font-semibold text-green-600">$16000</span>
           </p>
         </div>
-        <button className="bg-saltpan-100 w-3/12 max-sm:w-1/2 max-sm:self-center self-end p-3 text-sm rounded-md">
+        <button className="bg-saltpan-100 w-3/12 max-sm:w-1/2  self-end p-3 text-sm rounded-md">
           See all investments
         </button>
       </div>
 
       {/* Investment Calculator */}
-      <div className="mt-3">
+      <div className="mt-10">
         <h1 className="text-xl font-semibold pb-2 flex items-center gap-2 ">
           <GrGrow size={30} color="#0d3428" />
           Growth Machine

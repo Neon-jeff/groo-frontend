@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function CalculatorFieldSets({
   name,
@@ -9,6 +9,14 @@ export default function CalculatorFieldSets({
   step,
 }) {
   let [sliderVal, setSliderVal] = useState(min);
+  let InputRef=useRef(null)
+  let SliderRef=useRef(null)
+
+  useEffect(()=>{
+    let value=InputRef.current?.value
+    onChange(sliderVal);
+
+  },[sliderVal])
   return (
     <div>
       <fieldset className="w-full flex flex-col gap-x-0 gap-y-5 text-sm ">
@@ -17,28 +25,27 @@ export default function CalculatorFieldSets({
             {label}
           </label>
           <input
+            ref={InputRef}
             type="text"
             name={name}
             value={sliderVal}
             onChange={(e) => {
-              onChange(e.target.value);
-              setSliderVal(e.target.value);
-              console.log("hey baby");
+              setSliderVal(e.target.value)
+              onChange(e.target.value)
+
             }}
-            className="bg-sub h-10 w-full rounded-md p-3 input"
+            className="bg-gray-200 h-10 w-full rounded-md p-3 input"
           />
         </div>
         <input
+        ref={SliderRef}
           type="range"
           min={min}
           max={max}
-          value={sliderVal}
-          step={step}
-          onInput={(e) => {
-            setSliderVal(e.target.value);
-          }}
+          value={sliderVal?sliderVal:0}
           onChange={(e) => {
             setSliderVal(e.target.value);
+
           }}
           className=" range range-sm  accent-secondary"
         />
