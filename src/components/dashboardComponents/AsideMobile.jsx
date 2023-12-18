@@ -3,8 +3,9 @@ import ProfileCard from "./profileCard";
 import ButtonDBoard from "../buttons/buttonDashboard";
 import { IoCloseOutline } from "react-icons/io5";
 import { easeIn, easeOut, motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 export default function AsideMobile({ show, setShow }) {
+  let navigate=useNavigate()
   return (
     <>
       {show && (
@@ -49,7 +50,7 @@ export default function AsideMobile({ show, setShow }) {
               </Link>
             </div>
           </div>
-          <ButtonDBoard width="w-full max-sm:w-1/2" />
+          <ButtonDBoard  width="w-full max-sm:w-1/2" />
         </motion.div>
       )}
     </>

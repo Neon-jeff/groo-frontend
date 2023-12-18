@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { MdDashboard } from "react-icons/md";
 import { RiAccountCircleFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
@@ -8,6 +8,7 @@ import { IoLogOut } from "react-icons/io5";
 import { RiBankCardFill } from "react-icons/ri";
 
 export default function SideNav() {
+  let navigate=useNavigate()
         const iconProps = {
           size: 30,
         };
@@ -29,7 +30,7 @@ export default function SideNav() {
           Account
         </Link>
       </ul>
-      <ButtonDBoard />
+      <ButtonDBoard action={()=>{console.log("Baby");}}/>
       <Link className="flex items-center gap-5 w-full text-secondary">
         <MdEmail {...iconProps} />
         Contact Us

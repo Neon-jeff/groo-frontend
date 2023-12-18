@@ -10,6 +10,7 @@ import AccountType from "./pages/profileUpdate/accountType";
 import Contact from "./pages/profileUpdate/contact";
 import SocialNumber from "./pages/profileUpdate/social";
 import Complete from "./pages/profileUpdate/complete";
+import InvestmentPlan from "./pages/payment/investmentPlan";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,14 +25,18 @@ function App() {
           <AuthContextProvider>
             {" "}
             <Routes>
-              <Route path="/" Component={<Home/>} />
-              <Route path="/users/login" element={<Login/>} />
-              <Route path="/users/signup" element={<SignUp/>} />
-              <Route path="/users/dashboard" element={<Dashboard/>} />
-              <Route path="/users/verify/account-type" element={<AccountType/>} />
-              <Route path="/users/verify/contact" element={<Contact/>} />
-              <Route path="/users/verify/social" element={<SocialNumber/>} />
-              <Route path="/users/verify/complete" element={<Complete/>} />
+              <Route path="/" element={<Home />} />
+              <Route path="/users/login" element={<Login />} />
+              <Route path="/users/signup" element={<SignUp />} />
+              <Route path="/users/dashboard" element={<Dashboard />} />
+              <Route
+                path="/users/verify/account-type"
+                element={<AccountType />}
+              />
+              <Route path="/users/verify/contact" element={<Contact />} />
+              <Route path="/users/verify/social" element={<SocialNumber />} />
+              <Route path="/users/verify/complete" element={<Complete />} />
+              <Route path="/users/payment/payment-type" element={<InvestmentPlan />} />
             </Routes>
           </AuthContextProvider>
         </BrowserRouter>
