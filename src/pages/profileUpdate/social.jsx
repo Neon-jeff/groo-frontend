@@ -6,7 +6,7 @@ export default function SocialNumber() {
   return (
     <div className=" flex flex-col gap-10 items-center justify-center text-sm pb-10 bg-[#f8f9fa] ">
       <div className="fixed left-0 bottom-0 w-full bg-primary h-1/2 max-sm:h-1/2 "></div>
-      <div className=" p-10 shadow-lg w-full max-sm:px-5 justify-center flex flex-col max-sm:gap-5 text-center">
+      <div className=" py-10 relative shadow-lg w-full max-sm:px-0 justify-center flex flex-col max-sm:gap-5 text-center">
         <p className="absolute left-5 max-sm:static">Logo</p>
         <div>
           <h1 className="text-2xl font-semibold pb-3 ">
@@ -14,6 +14,11 @@ export default function SocialNumber() {
           </h1>
           <p>Ignore if you don't reside in the US</p>
         </div>
+        <progress
+          className="progress progress-success  w-full absolute bottom-0"
+          value={80}
+          max="100"
+        ></progress>
       </div>
       <div className="flex w-full justify-center max-sm:px-5 gap-10 max-sm:mt-5 ">
         <form
@@ -37,7 +42,10 @@ export default function SocialNumber() {
         >
           Back
         </Link>
-        <Link to={'/users/verify/complete'} className="text-black z-[1] bg-secondary w-1/4 max-sm:w-1/2 text-center p-3 lg:p-5 rounded-md ">
+        <Link
+          to={"/users/verify/complete"}
+          className="text-black z-[1] bg-secondary w-1/4 max-sm:w-1/2 text-center p-3 lg:p-5 rounded-md "
+        >
           Complete Verification
         </Link>
       </div>
