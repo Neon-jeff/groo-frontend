@@ -1,5 +1,6 @@
 import React from 'react'
 import FieldSet from '../../components/AuthComponents/fieldSet';
+import { Link } from 'react-router-dom';
 
 export default function Contact() {
   return (
@@ -8,30 +9,30 @@ export default function Contact() {
       <div className=" p-10 shadow-lg w-full max-sm:px-5 justify-center flex flex-col max-sm:gap-5 text-center">
         <p className="absolute left-5 max-sm:static">Logo</p>
         <div>
-          <h1 className="text-2xl font-semibold pb-3 max-sm:pb-0">
-            Add Contact Info
-          </h1>
-          <p>How can we reach you</p>
+          <h1 className="text-2xl font-semibold pb-3 ">Add Contact Info</h1>
+          <p>How can we reach you?</p>
         </div>
       </div>
       <div className="flex w-full justify-center max-sm:px-5 gap-10 max-sm:mt-5 ">
         <form
           action=""
           method="post"
-          className="z-[1] w-full lg:w-1/3 lg:grid lg:grid-cols-2 grid grid-cols-2 gap-3 lg:p-10 bg-white p-5 rounded-md shadow-lg "
+          className="z-[1] w-full lg:w-1/3 lg:grid lg:grid-cols-2 grid grid-cols-2 gap-3 lg:p-10 bg-saltpan-50 p-5 rounded-md shadow-lg "
         >
           <FieldSet label={"Phone"} type={"tel"} name={"phone"} />
           <FieldSet label={"Alternate Phone"} type={"tel"} name={"phone"} />
           <FieldSet label={"Address Line"} type={"text"} name={"address"} />
           <FieldSet label={"State"} type={"text"} name={"text"} />
           <FieldSet label={"Zip Code"} type={"text"} name={"text"} />
-
         </form>
       </div>
 
-      <button className="text-black z-[1] bg-secondary w-1/4 max-sm:w-1/2 p-5 rounded-md ">
+      <Link
+        to={"/users/verify/social"}
+        className="text-black text-center z-[1] bg-secondary w-1/4 max-sm:w-1/2 p-5 rounded-md "
+      >
         Next
-      </button>
+      </Link>
     </div>
   );
 }

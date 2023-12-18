@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ButtonAuth from '../../components/buttons/buttonLogin'
 import FeatureCard from '../../components/homeComponents/featureCard'
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function AccountType() {
+  let navigate=useNavigate()
+  let [proceed,setProceed]= useState(false)
   return (
     <div className=" flex flex-col gap-10 items-center justify-center text-sm pb-10 bg-[#f8f9fa] ">
       <div className="fixed left-0 bottom-0 w-full bg-primary h-1/2 max-sm:h-1/2 "></div>
@@ -32,14 +35,13 @@ export default function AccountType() {
         </div>
       </div>
       <p className="flex w-1/2 max-sm:w-full max-sm:px-5 text-secondary items-center gap-5 z-[1] ">
-        <input type="checkbox" />
+        <input type="checkbox" value={proceed} onChange={()=>{setProceed(!proceed)}} />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nostrum
-          voluptates vitae, quidem deserunt veniam velit quisquam neque eius
-          tempora?
+          By checking this box you agree to our Terms of Service and Privacy
+          Policy , and our partner Dwolla's Terms of Service and Privacy Policy
         </p>
       </p>
-      <button className="text-black z-[1] bg-secondary w-1/4 max-sm:w-1/2 p-5 rounded-md ">
+      <button disabled={!proceed}  className={`text-center text-black z-[1] ${proceed?"bg-secondary":"bg-yellow-200"} w-1/4 max-sm:w-1/2 p-5 rounded-md `} onClick={()=>{navigate('/users/verify/contact')}} >
         Proceed
       </button>
     </div>

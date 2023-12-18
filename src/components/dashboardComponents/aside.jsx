@@ -1,6 +1,7 @@
 import React from 'react'
 import ProfileCard from './profileCard'
 import ButtonDBoard from '../buttons/buttonDashboard';
+import { Link } from 'react-router-dom';
 
 export default function Aside() {
   return (
@@ -21,7 +22,7 @@ export default function Aside() {
             <span>2. add address</span>
             <span>3. add social security number</span>
           </p>
-          <button className="w-1/2 bg-saltpan-300 p-2 rounded-md">Start</button>
+          <Link to={"/users/verify/account-type"} className="text-center w-1/2 bg-saltpan-300 p-2 rounded-md">Start</Link>
         </div>
       </div>
       <ButtonDBoard width="w-full max-sm:w-1/2" />
