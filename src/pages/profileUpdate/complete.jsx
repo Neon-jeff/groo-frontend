@@ -1,6 +1,6 @@
 import React from "react";
 import FieldSet from "../../components/AuthComponents/fieldSet";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 
 export default function Complete() {
@@ -31,9 +31,9 @@ export default function Complete() {
         </div>
       </div>
       <div className="z-[1] px-3 flex w-full max-sm:gap-5 justify-center gap-10">
-        <button className="text-black z-[1] bg-secondary w-1/4 max-sm:w-1/2 p-3 lg:p-5 rounded-md ">
+        <Link to={'/users/payment/payment-type'} className="text-black z-[1] bg-secondary text-center w-1/4 max-sm:w-1/2 p-3 lg:p-5 rounded-md ">
           Make Investment
-        </button>
+        </Link>
       </div>
     </div>
   );
