@@ -11,6 +11,8 @@ import Contact from "./pages/profileUpdate/contact";
 import SocialNumber from "./pages/profileUpdate/social";
 import Complete from "./pages/profileUpdate/complete";
 import InvestmentPlan from "./pages/payment/investmentPlan";
+import PaymentCheckout from "./pages/payment/paymentSummary";
+import MakePayment from "./pages/payment/makepayment";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -36,7 +38,18 @@ function App() {
               <Route path="/users/verify/contact" element={<Contact />} />
               <Route path="/users/verify/social" element={<SocialNumber />} />
               <Route path="/users/verify/complete" element={<Complete />} />
-              <Route path="/users/payment/payment-type" element={<InvestmentPlan />} />
+              <Route
+                path="/users/payment/payment-type"
+                element={<InvestmentPlan />}
+              />
+              <Route
+                path="/users/payment/checkout"
+                element={<PaymentCheckout />}
+              />
+              <Route
+                path="/users/payment/make-payment"
+                element={<MakePayment />}
+              />
             </Routes>
           </AuthContextProvider>
         </BrowserRouter>
