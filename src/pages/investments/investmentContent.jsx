@@ -45,7 +45,7 @@ export default function InvestmentHistory() {
                 $400
               </p>
               <p className="flex gap-3 items-center">03-12-203</p>
-              <p className="bg-red-100 p-2 rounded-md">Pending</p>
+              <p className="text-red-400">Pending</p>
             </div>
           </div>
         )}
@@ -56,7 +56,7 @@ export default function InvestmentHistory() {
                 $200 <br /> Quaterly
               </p>
               <p className="flex gap-3 items-center">03-12-203</p>
-              <p className="bg-red-100 p-2 rounded-md">Pending</p>
+              <p className="text-red-400">Pending</p>
             </div>
           </div>
         )}
