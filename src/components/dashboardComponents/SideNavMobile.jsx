@@ -21,7 +21,7 @@ export default function SideNavMobile() {
   return (
     <div className=" lg:w-2/12 lg:hidden">
       {/* mobile Nav */}
-      <div className="border-b-[.5px] bg-sub border-black items-center w-full md:hidden fixed top-0 p-5 flex justify-between">
+      <div className="border-b-[.5px] bg-dash border-black items-center w-full md:hidden fixed top-0 p-5 flex justify-between">
         <LuMenu
           {...iconProps}
           onClick={() => {

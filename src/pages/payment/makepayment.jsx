@@ -15,7 +15,7 @@ export default function MakePayment() {
         </div>
         <progress
           className="progress progress-success  w-full absolute bottom-0"
-          value={100}
+          value={80}
           max="100"
         ></progress>
       </div>
@@ -53,7 +53,7 @@ export default function MakePayment() {
           {crypto && (
             <div className="flex   flex-row-reverse max-sm:flex-col w-full max-sm:gap-1 justify-center gap-10  items-center">
               <div className="w-full">
-                <p className="font-medium">USDT Address(ERC-20)</p>
+                <p className="font-medium">USDT Address (ERC-20)</p>
                 <p className="bg-blue-100 cursor-pointer mt-3 w-full flex  items-center justify-between text-start rounded-md  p-3">
                   0x1d6A91643e8eC808a631e <br /> A407549E47d1A8A95b2
                   <IoCopyOutline size={20} />
@@ -96,7 +96,7 @@ export default function MakePayment() {
               Back
             </Link>
             <Link
-              to={"/users/verify/complete"}
+              to={"/users/payment/success"}
               className="text-black z-[1] bg-secondary w-1/3 max-sm:w-1/2 text-center p-3 lg:p-2 rounded-md "
             >
               Complete
