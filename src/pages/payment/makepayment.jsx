@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { IoCopyOutline } from "react-icons/io5";
 
 export default function MakePayment() {
   let [crypto, setCrypto] = useState(true);
@@ -21,9 +21,7 @@ export default function MakePayment() {
       </div>
       <div className="flex w-full justify-center max-sm:px-5 gap-10 max-sm:mt-5 ">
         <div className="z-[1] w-full lg:w-1/2 flex flex-col items-center   gap-5 lg:p-8 bg-saltpan-50 p-5 rounded-md shadow-lg ">
-          <h1 className="text-xl font-medium self-start">
-            Select Payment Method
-          </h1>
+          <h1 className="text-xl font-medium self-start">Payment Methods</h1>
           {/* toggle payment option*/}
           <div className="flex bg-gray-200 p-1 shadow-lg rounded-md w-full">
             <p
@@ -53,15 +51,39 @@ export default function MakePayment() {
           </div>
           {/* Payment Cards*/}
           {crypto && (
-            <div className="flex  max-sm:text-center flex-row-reverse max-sm:flex-col max-sm:gap-5 justify-center gap-10  items-center">
+            <div className="flex  max-sm:text-center flex-row-reverse max-sm:flex-col max-sm:gap-1 justify-center gap-10  items-center">
               <div className="">
-                <p>Click address to copy</p>
-                <p className="bg-blue-100 cursor-pointer w-full  rounded-md mt-3 p-3">0x1d6A91643e8eC808a631e <br /> A407549E47d1A8A95b2</p>
+                <p className="bg-blue-100 cursor-pointer w-full flex gap-5 items-center  rounded-md  p-3">
+                  0x1d6A91643e8eC808a631e <br /> A407549E47d1A8A95b2
+                  <IoCopyOutline size={20} />
+                </p>
               </div>
               <p className="font-semibold">OR</p>
               <div>
                 <p className="mb-3">Scan barcode to pay</p>
                 <div className="h-[200px] w-[200px] bg-saltpan-200 rounded-md"></div>
+              </div>
+            </div>
+          )}
+          {!crypto && (
+            <div className="w-full flex flex-col gap-5">
+              <div className="flex w-full justify-between">
+                <p>Bank Name</p>
+                <p className="flex gap-3 items-center">
+                  Name of bank <IoCopyOutline size={20} />
+                </p>
+              </div>
+              <div className="flex w-full justify-between">
+                <p>Bank Number</p>
+                <p className="flex gap-3 items-center">
+                  00000000 <IoCopyOutline size={20} />
+                </p>
+              </div>
+              <div className="flex w-full justify-between">
+                <p>Bank Name</p>
+                <p className="flex gap-3 items-center">
+                  Name of bank <IoCopyOutline size={20} />
+                </p>
               </div>
             </div>
           )}
@@ -76,7 +98,7 @@ export default function MakePayment() {
               to={"/users/verify/complete"}
               className="text-black z-[1] bg-secondary w-1/3 max-sm:w-1/2 text-center p-3 lg:p-2 rounded-md "
             >
-              Complete Investment
+              Complete
             </Link>
           </div>
         </div>
