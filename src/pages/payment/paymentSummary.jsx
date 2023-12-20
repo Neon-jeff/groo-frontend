@@ -15,7 +15,7 @@ export default function PaymentCheckout() {
         </div>
         <progress
           className="progress progress-success  w-full absolute bottom-0"
-          value={100}
+          value={70}
           max="100"
         ></progress>
       </div>
@@ -27,7 +27,7 @@ export default function PaymentCheckout() {
           <div className="w-full flex flex-col gap-2">
             <p className="flex justify-between w-full">
               <span>TBD Units</span>
-              <span className="font-semibold">$200</span>
+              <span className="font-semibold">$100</span>
             </p>
             <p className="flex justify-between w-full">
               <span>Fees</span>
