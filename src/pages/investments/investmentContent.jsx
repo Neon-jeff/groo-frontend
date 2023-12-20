@@ -39,8 +39,8 @@ export default function InvestmentHistory() {
         </div>
         {/* Payment Cards*/}
         {crypto && (
-          <div className="w-full flex flex-col gap-5">
-            <div className="flex w-full items-center bg-blue-100 py-5 px-3 rounded-md justify-between">
+          <div className="w-full flex flex-col gap-5 text-sm font-medium">
+            <div className="flex w-full items-center bg-saltpan-100 py-5 px-3 rounded-md justify-between">
               <p>
                 $400
               </p>
@@ -50,7 +50,7 @@ export default function InvestmentHistory() {
           </div>
         )}
         {!crypto && (
-          <div className="w-full flex flex-col gap-5">
+          <div className="w-full text-sm font-medium flex flex-col gap-5">
             <div className="flex w-full items-center bg-saltpan-100 py-5 px-3 rounded-md justify-between">
               <p>
                 $200 <br /> Quaterly
