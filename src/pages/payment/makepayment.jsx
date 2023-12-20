@@ -51,9 +51,9 @@ export default function MakePayment() {
           </div>
           {/* Payment Cards*/}
           {crypto && (
-            <div className="flex  max-sm:text-center flex-row-reverse max-sm:flex-col max-sm:gap-1 justify-center gap-10  items-center">
-              <div className="">
-                <p className="bg-blue-100 cursor-pointer w-full flex gap-5 items-center  rounded-md  p-3">
+            <div className="flex  max-sm:text-center flex-row-reverse max-sm:flex-col w-full max-sm:gap-1 justify-center gap-10  items-center">
+              <div className="w-full">
+                <p className="bg-blue-100 cursor-pointer w-full flex  items-center justify-between text-start rounded-md  p-3">
                   0x1d6A91643e8eC808a631e <br /> A407549E47d1A8A95b2
                   <IoCopyOutline size={20} />
                 </p>
