@@ -14,6 +14,7 @@ import InvestmentPlan from "./pages/payment/investmentPlan";
 import PaymentCheckout from "./pages/payment/paymentSummary";
 import MakePayment from "./pages/payment/makepayment";
 import PaymentSuccess from "./pages/payment/success";
+import Investments from "./pages/investments/investments";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -53,7 +54,11 @@ function App() {
               />
               <Route
                 path="/users/payment/success"
-                element={<PaymentSuccess/>}
+                element={<PaymentSuccess />}
+              />
+              <Route
+                path="/users/investments"
+                element={<Investments />}
               />
             </Routes>
           </AuthContextProvider>

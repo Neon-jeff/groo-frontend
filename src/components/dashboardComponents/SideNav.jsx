@@ -17,11 +17,11 @@ export default function SideNav() {
       <p>LOGO</p>
       {/* Nav Element */}
       <ul className="text-white flex flex-col gap-8 w-full">
-        <Link className="flex items-center gap-5 ">
+        <Link to={"/users/dashboard"} className="flex items-center gap-5 ">
           <MdDashboard {...iconProps} />
           Dashboard
         </Link>
-        <Link className="flex items-center gap-5 ">
+        <Link to={"/users/investments"} className="flex items-center gap-5 ">
           <RiBankCardFill {...iconProps} />
           Investments
         </Link>
