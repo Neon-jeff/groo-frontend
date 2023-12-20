@@ -46,23 +46,24 @@ export default function MakePayment() {
                 setCrypto(false);
               }}
             >
-              ACH Bank
+              ACH Transfer
             </p>
           </div>
           {/* Payment Cards*/}
           {crypto && (
-            <div className="flex  max-sm:text-center flex-row-reverse max-sm:flex-col w-full max-sm:gap-1 justify-center gap-10  items-center">
+            <div className="flex   flex-row-reverse max-sm:flex-col w-full max-sm:gap-1 justify-center gap-10  items-center">
               <div className="w-full">
-                <p className="bg-blue-100 cursor-pointer w-full flex  items-center justify-between text-start rounded-md  p-3">
+                <p className="font-medium">USDT Address(ERC-20)</p>
+                <p className="bg-blue-100 cursor-pointer mt-3 w-full flex  items-center justify-between text-start rounded-md  p-3">
                   0x1d6A91643e8eC808a631e <br /> A407549E47d1A8A95b2
                   <IoCopyOutline size={20} />
                 </p>
               </div>
-              <p className="font-semibold">OR</p>
+              {/* <p className="font-semibold">OR</p>
               <div>
                 <p className="mb-3">Scan barcode to pay</p>
                 <div className="h-[200px] w-[200px] bg-saltpan-200 rounded-md"></div>
-              </div>
+              </div> */}
             </div>
           )}
           {!crypto && (
@@ -70,19 +71,19 @@ export default function MakePayment() {
               <div className="flex w-full justify-between">
                 <p>Bank Name</p>
                 <p className="flex gap-3 items-center">
-                  Name of bank <IoCopyOutline size={20} />
+                  Name of bank <IoCopyOutline size={15} />
                 </p>
               </div>
               <div className="flex w-full justify-between">
                 <p>Bank Number</p>
                 <p className="flex gap-3 items-center">
-                  00000000 <IoCopyOutline size={20} />
+                  00000000 <IoCopyOutline size={15} />
                 </p>
               </div>
               <div className="flex w-full justify-between">
                 <p>Bank Name</p>
                 <p className="flex gap-3 items-center">
-                  Name of bank <IoCopyOutline size={20} />
+                  Name of bank <IoCopyOutline size={15} />
                 </p>
               </div>
             </div>
