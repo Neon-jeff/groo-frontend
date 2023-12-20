@@ -9,7 +9,7 @@ export default function InvestmentHistory() {
       <h1 className="text-2xl font-semibold">Investment History</h1>
       {/* investment type-toggle and values */}
       <div className=" w-full lg:w-1/2 flex flex-col items-center   gap-5 lg:p-8 bg-saltpan-50 p-5 rounded-md shadow-lg ">
-        <h1 className="text-xl font-medium self-start">Investment Type</h1>
+        {/* <h1 className="text-xl font-medium self-start">Investment Type</h1> */}
         {/* toggle payment option*/}
         <div className="flex bg-gray-200 p-1 shadow-lg rounded-md w-full">
           <p
@@ -41,10 +41,8 @@ export default function InvestmentHistory() {
         {crypto && (
           <div className="w-full flex flex-col gap-5 text-sm font-medium">
             <div className="flex w-full items-center bg-saltpan-100 py-5 px-3 rounded-md justify-between">
-              <p>
-                $400
-              </p>
-              <p className="flex gap-3 items-center">03-12-203</p>
+              <p>$400</p>
+              <p className="flex gap-3 items-center">03-12-2023</p>
               <p className="text-red-400">Pending</p>
             </div>
           </div>
@@ -53,9 +51,9 @@ export default function InvestmentHistory() {
           <div className="w-full text-sm font-medium flex flex-col gap-5">
             <div className="flex w-full items-center bg-saltpan-100 py-5 px-3 rounded-md justify-between">
               <p>
-                $200 <br /> Quaterly
+                $200 <br /> <span className='text-green-600 text-[.7rem]'>Quaterly</span>
               </p>
-              <p className="flex gap-3 items-center">03-12-203</p>
+              <p className="flex gap-3 items-center">03-12-2023</p>
               <p className="text-red-400">Pending</p>
             </div>
           </div>
