@@ -1,9 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoCopyOutline } from "react-icons/io5";
-
+import FieldSet from "../../components/AuthComponents/fieldSet";
+import createInvestment from "../../data/invest";
 export default function MakePayment() {
+  let location = useLocation();
+  console.log(location.state);
   let [crypto, setCrypto] = useState(true);
+  let [reciept, setReciept] = useState(null);
+  let navigate = useNavigate();
+  console.log(reciept);
   return (
     <div className=" flex flex-col gap-10 items-center justify-center text-sm pb-10 bg-[#f8f9fa] ">
       <div className="fixed left-0 bottom-0 w-full bg-primary h-1/2 max-sm:h-1/2 "></div>
@@ -88,19 +94,41 @@ export default function MakePayment() {
               </div>
             </div>
           )}
+          <FieldSet
+            label={"Upload reciept"}
+            required={true}
+            type={"file"}
+            state={reciept}
+            setState={setReciept}
+          />
           <div className="z-[1] px-1 flex w-full text-[.8rem] mt-5 max-sm:gap-5 justify-end gap-5">
             <Link
               className="text-black text-center z-[1] bg-gray-200 w-1/3 max-sm:w-1/2 lg:p-2 p-3 rounded-md"
               to={"/users/payment/checkout"}
+              state={location.state}
             >
               Back
             </Link>
-            <Link
+            <button
+              onClick={ async() => {
+                let form = new FormData();
+                if (!reciept) {
+                  alert("upload image");
+                } else {
+                  form.append("amount", location.state.amount);
+                  form.append("inv_type", location.state.inv_type);
+                  form.append("frequency_type", location.state.frequency);
+                  form.append("image",reciept)
+                  form.append("confirmed",false)
+                  await createInvestment(form).then(data=>console.log(data))
+                  navigate("/users/payment/success")
+                }
+              }}
               to={"/users/payment/success"}
               className="text-black z-[1] bg-secondary w-1/3 max-sm:w-1/2 text-center p-3 lg:p-2 rounded-md "
             >
               Complete
-            </Link>
+            </button>
           </div>
         </div>
       </div>

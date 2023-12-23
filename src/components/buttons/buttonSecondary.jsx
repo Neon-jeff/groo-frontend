@@ -5,6 +5,9 @@ export default function ButtonSecondary({text,width,action}) {
     <button
       className={`${width} relative mt-5  h-16 hover:scale-95 transition duration-100 ease-in `}
       onClick={() => {
+        if (!action) {
+          navigate("/users/signup");
+        }
         action();
       }}
     >

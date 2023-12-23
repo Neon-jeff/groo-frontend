@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import ButtonAuth from '../../components/buttons/buttonLogin'
 import FeatureCard from '../../components/homeComponents/featureCard'
 import { Link, useNavigate } from 'react-router-dom';
+import { useAccountType } from '../../data/store';
 
 export default function AccountType() {
+  let {isIndividual,setIndividual,setCustodial}=useAccountType(state=>state)
   let navigate=useNavigate()
   let [proceed,setProceed]= useState(false)
   return (
@@ -24,14 +26,30 @@ export default function AccountType() {
         ></progress>
       </div>
       <div className="flex w-full justify-center max-sm:px-5 gap-10 max-sm:mt-5 ">
-        <div className="bg-dash h-56 w-1/4 max-sm:w-1/2 flex flex-col items-center justify-center rounded-md border-[1px] border-black z-[1] p-10 max-sm:p-5 text-center">
+        <div
+          className={`bg-dash h-56 w-1/4 max-sm:w-1/2 flex flex-col items-center justify-center rounded-md border-[1px] border-black z-[1] p-10 max-sm:p-5 ${
+            isIndividual
+              ? "border-4 border-secondary"
+              : ""
+          } text-center`}
+          onClick={setIndividual}
+        >
           <p className="font-semibold">Individual</p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
             repudiandae.
           </p>
         </div>
-        <div className="bg-dash h-56 w-1/4 max-sm:w-1/2 flex flex-col items-center justify-center rounded-md border-[1px] border-black z-[1] p-10 max-sm:p-5 text-center">
+        <div
+          className={`bg-dash h-56 w-1/4 max-sm:w-1/2 flex flex-col items-center justify-center rounded-md border-[1px] border-black z-[1] p-10 max-sm:p-5 text-center ${
+            !isIndividual
+              ? "border-4 border-secondary"
+              : ""
+          }`}
+          onClick={()=>{
+            setCustodial()
+          }}
+        >
           <p className="font-semibold">Custodial</p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,

@@ -6,6 +6,8 @@ import SelectField from '../../components/AuthComponents/selectField';
 
 export default function InvestmentPlan() {
     let [oneTime,setonetime]= useState(true)
+    let [amount,setAmount]=useState(0)
+    let [frequency,setFrequency]=useState("none")
   return (
     <div className=" flex flex-col gap-10 items-center justify-center text-sm pb-10 bg-[#f8f9fa] ">
       <div className="fixed left-0 bottom-0 w-full bg-primary h-1/2 max-sm:h-1/2 "></div>
@@ -35,6 +37,7 @@ export default function InvestmentPlan() {
               }`}
               onClick={() => {
                 setonetime(true);
+                setFrequency("none")
               }}
             >
               One time
@@ -60,6 +63,8 @@ export default function InvestmentPlan() {
                 type={"number"}
                 name={"amount"}
                 placeholder="$ 0.00"
+                state={amount}
+                setState={setAmount}
               />
               <p className="text-[.8rem]">minimum amount ($100)</p>
             </div>
@@ -71,7 +76,7 @@ export default function InvestmentPlan() {
           {
             !oneTime&&(
                 <div className='self-start  w-1/2 max-sm:w-full' >
-                    <SelectField options={["Monthly","Quaterly"]} name={"frequency"} label={"Frequency"}/>
+                    <SelectField options={["Monthly","Quaterly"]} state={frequency} setState={setFrequency} name={"frequency"} label={"Frequency"} />
                 </div>
             )
           }
@@ -79,12 +84,22 @@ export default function InvestmentPlan() {
             <Link
               className="text-black text-center z-[1] bg-gray-200 w-1/3 max-sm:w-1/2 lg:p-2 p-3 rounded-md"
               to={"/users/dashboard"}
+
             >
-              Back
+              Dashboard
             </Link>
             <Link
-              to={"/users/payment/checkout"}
+              to={amount>=100?"/users/payment/checkout":null}
               className="text-black z-[1] bg-secondary w-1/3 max-sm:w-1/2 text-center p-3 lg:p-2 rounded-md "
+              state={{amount,frequency,inv_type:oneTime?"onetime":"recurring"}}
+              onClick={
+                ()=>{
+                  if(amount<100){
+                    alert("minimum capital is $100")
+                  }
+                }
+              }
+
             >
               Next
             </Link>

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 
 export default function PaymentCheckout() {
+  let location=useLocation()
 
   return (
     <div className=" flex flex-col gap-10 items-center justify-center text-sm pb-10 bg-[#f8f9fa] ">
@@ -24,18 +25,19 @@ export default function PaymentCheckout() {
           {/* Investment Summary*/}
 
           <h1 className="text-xl font-medium">Order Summary</h1>
+          <p>{}</p>
           <div className="w-full flex flex-col gap-2">
             <p className="flex justify-between w-full">
               <span>TBD Units</span>
-              <span className="font-semibold">$100</span>
+              <span className="font-semibold">${location.state?.amount}</span>
             </p>
             <p className="flex justify-between w-full">
               <span>Fees</span>
-              <span className="font-semibold">$5</span>
+              <span className="font-semibold">5%</span>
             </p>
             <p className="flex justify-between w-full">
               <span>Total</span>
-              <span className="font-semibold">$105</span>
+              <span className="font-semibold text-green-600">${parseInt(location.state?.amount) + parseInt(0.05*location.state?.amount)}</span>
             </p>
           </div>
 
@@ -49,7 +51,8 @@ export default function PaymentCheckout() {
             </Link>
             <Link
               to={"/users/payment/make-payment"}
-              className="text-black z-[1] bg-secondary w-1/3 max-sm:w-1/2 text-center p-3 lg:p-2 rounded-md "
+              className="text-black z-[1] bg-secondary w-1/3 max-sm:w-1/2 text-center p-3 lg:p-2 rounded-md"
+              state={location.state}
             >
               Make Payment
             </Link>

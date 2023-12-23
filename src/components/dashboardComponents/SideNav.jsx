@@ -6,6 +6,7 @@ import { MdEmail } from "react-icons/md";
 import ButtonDBoard from '../buttons/buttonDashboard';
 import { IoLogOut } from "react-icons/io5";
 import { RiBankCardFill } from "react-icons/ri";
+import logout from '../../data/logout';
 
 export default function SideNav() {
   let navigate=useNavigate()
@@ -35,7 +36,9 @@ export default function SideNav() {
         <MdEmail {...iconProps} />
         Contact Us
       </Link>
-      <Link className="flex items-center gap-5 w-full text-gray-400 ">
+      <Link className="flex items-center gap-5 w-full text-gray-400 " onClick={async()=>{
+        await logout()
+      }}>
         <IoLogOut {...iconProps} />
         Logout
       </Link>

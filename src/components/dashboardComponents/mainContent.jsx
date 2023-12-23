@@ -7,14 +7,21 @@ import capital from '../../assets/icons/money.png'
 import time from '../../assets/icons/clock (1).png'
 import recurring from '../../assets/icons/subscription-model.png'
 import profit from '../../assets/icons/financial-profit.png'
+import { userStore } from '../../data/store';
 
 export default function MainContent({showMobile,mobile}) {
+  let {profile}=userStore(state=>state.user)
+  if(!profile){
+    return <div className='bg-white text-black text-3xl h-screen w-screen'>
+      <p>loading</p>
+    </div>
+  }
   return (
     <div className=" w-7/12 px-10 py-6 max-sm:px-5 max-sm:w-full mt-28 ">
       {/* Investment Status */}
       <div className="flex flex-col gap-5">
         <div className='flex justify-between items-center'>
-          <p className='text-2xl font-medium'>Welcome, Jeff</p>
+          <p className='text-2xl font-medium'>Welcome,{profile.user.first_name} </p>
           <AiFillAppstore
             className="self-end sm:hidden"
             size={40}

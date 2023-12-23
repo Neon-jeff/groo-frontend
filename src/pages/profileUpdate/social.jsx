@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FieldSet from "../../components/AuthComponents/fieldSet";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useProfileUpdate, userStore } from "../../data/store";
+import { useAccountType } from '../../data/store';
+import updateProfile from '../../data/profile'
+
 export default function SocialNumber() {
+    let {profile,setProfile}=useProfileUpdate(state=>state)
+    let acc_type=useAccountType(state=>state.isIndividual)
+    let location=useLocation()
+    let [social,setSocial]=useState('')
     let navigate=useNavigate()
   return (
     <div className=" flex flex-col gap-10 items-center justify-center text-sm pb-10 bg-[#f8f9fa] ">
@@ -25,6 +33,7 @@ export default function SocialNumber() {
           action=""
           method="post"
           className="z-[1] w-full lg:w-1/3 lg:grid lg:grid-cols-1 h-56 place-content-center  grid grid-cols-1 gap-3 lg:p-10 bg-saltpan-50 p-5 rounded-md shadow-lg "
+          onSubmit={(e)=>{e.preventDefault()}}
         >
           <FieldSet
             label={"Social Security Number (US residents only)"}
@@ -32,22 +41,43 @@ export default function SocialNumber() {
             type={"text"}
             name={"text"}
             required={false}
+            state={social}
+            setState={setSocial}
           />
+          <div className="z-[1]  flex justify-self-end w-full max-sm:gap-5 justify-end gap-5 text-[.8rem] max-sm:text-[.65rem]">
+            <Link
+              className="text-black text-center z-[1] bg-gray-200 w-1/2 max-sm:w-1/2 lg:p-2 p-3 rounded-md"
+              to={"/users/verify/contact"}
+            >
+              Back
+            </Link>
+            <button
+              onClick={async()=>{
+                setProfile({
+                  social_number:social,
+                  acct_type:acc_type?"individual":"custodial",
+                  is_verified:true
+                })
+                let data = {
+                  ...location.state,
+                  ...{
+                    social_number: social!=''?social:"not-available",
+                    acct_type: acc_type ? "individual" : "custodial",
+                    is_verified: true,
+                  },
+                };
+                console.log(data);
+                await updateProfile(data)
+                navigate("/users/verify/complete")
+
+
+              }}
+              className="text-black z-[1] bg-secondary  max-sm:w-1/2 text-center p-3 lg:p-2 rounded-md "
+            >
+              Complete Verification
+            </button>
+          </div>
         </form>
-      </div>
-      <div className="z-[1] px-3 flex w-full max-sm:gap-5 justify-center gap-10">
-        <Link
-          className="text-black text-center z-[1] bg-dash w-1/5 max-sm:w-1/2 lg:p-5 p-3 rounded-md"
-          to={"/users/verify/contact"}
-        >
-          Back
-        </Link>
-        <Link
-          to={"/users/verify/complete"}
-          className="text-black z-[1] bg-secondary w-1/4 max-sm:w-1/2 text-center p-3 lg:p-5 rounded-md "
-        >
-          Complete Verification
-        </Link>
       </div>
     </div>
   );

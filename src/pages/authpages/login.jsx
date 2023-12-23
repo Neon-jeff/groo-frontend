@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import FieldSet from '../../components/AuthComponents/fieldSet'
 import ButtonAuth from '../../components/buttons/buttonLogin';
 import logo from "../../assets/icons/logoSmall.png";
-
+import login from '../../data/login'
+import { useAuth } from '../../data/store';
 export default function Login() {
+  let setAuth=useAuth((state)=>state.setAuth)
+  let [email,setEmail]=useState('')
+  let [password,setPassword]=useState('')
   return (
     <div className=" p-10 h-screen">
 
@@ -17,11 +21,15 @@ export default function Login() {
         <p>
           Don't have an account? <Link to={'/signup'} className='text-lime-600'>Sign Up</Link>
         </p>
-        <form action="" method="post" className="w-full pt-5">
+        <form action="" method="post" className="w-full pt-5" onSubmit={async(e)=>{
+            e.preventDefault()
+            let data={"email":email,"password":password}
+            await login(data)
+        }}>
           {/* Names container */}
           <div className="w-full flex flex-col gap-3">
-            <FieldSet label={"Email"} type={"email"} name={"email"} />
-            <FieldSet label={"Password"} type={"password"} name={"password"} />
+            <FieldSet label={"Email"} type={"email"} name={"email"} state={email} setState={setEmail} />
+            <FieldSet label={"Password"} type={"password"} name={"password"} state={password} setState={setPassword} />
             <fieldset className="flex items-center gap-3">
               <input type="checkbox" name="remember" id="" />
               <label htmlFor="">Remember me</label>
