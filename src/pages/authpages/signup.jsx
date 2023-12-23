@@ -28,8 +28,7 @@ export default function SignUp() {
         <form action="" method="post" className="w-full pt-5" onSubmit={async(e)=>{
           e.preventDefault()
           let data={first_name,last_name,email,password}
-          let res=await register(data)
-          console.log(res);
+          await register(data)
         }}>
           {/* Names container */}
           <div className="w-full flex flex-col gap-3">

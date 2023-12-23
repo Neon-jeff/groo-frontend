@@ -35,4 +35,12 @@ export const useProfileUpdate=create(set=>(
       })}
   }
 ))
+
+export const useToken=create(set=>(
+  {
+    token:"",
+    setProfile:(data)=>{
+      set({token:data})}
+  }
+))
 const useInvestment=null

@@ -1,4 +1,5 @@
 import { useAuth } from "./store"
+import login from "./login"
 
 let headers=new Headers
 
@@ -11,8 +12,9 @@ let register=async(data)=>{
         body:JSON.stringify(data),
         headers:headers
     })
-    let result=response
-    return result
+    if(response.status==200){
+        await login({"email":data.email,"password":data.password})
+    }
 }
 
 

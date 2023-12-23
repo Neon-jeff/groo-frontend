@@ -10,30 +10,31 @@ export default function Problems() {
           Has investing in Real Estate become difficult
         </h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-          temporibus provident qui doloribus beatae laboriosam ipsam id
-          praesentium excepturi minima!
+          Embarking on the journey of real estate investment brings promise and
+          potential, but not without its challenges. Navigating market
+          fluctuations, understanding diverse property landscapes, and managing
+          financial intricacies demand strategic foresight and resilience
         </p>
       </div>
       <div className="w-1/2 flex flex-col items-center gap-10 max-sm:gap-5 max-sm:w-full ">
         <ProblemCard
           text={
-            " Lorem ipsum dolor sit amet consectetur adipisicing elit.Option temporibus provident qui doloribus beatae laboriosam ipsam id praesentium excepturi minima!"
+            "Economic Uncertainty: Fluctuations in the economy create instability, impacting property values and investment returns."
           }
         />
         <ProblemCard
           text={
-            " Lorem ipsum dolor sit amet consectetur adipisicing elit.Option temporibus provident qui doloribus beatae laboriosam ipsam id praesentium excepturi minima!"
+            "Rising Interest Rates: Higher rates increase borrowing costs, affecting affordability and investment feasibility."
           }
         />
         <ProblemCard
           text={
-            " Lorem ipsum dolor sit amet consectetur adipisicing elit.Option temporibus provident qui doloribus beatae laboriosam ipsam id praesentium excepturi minima!"
+            " Supply Shortages: Limited property availability intensifies competition and raises acquisition costs for investors."
           }
         />
         <ProblemCard
           text={
-            " Lorem ipsum dolor sit amet consectetur adipisicing elit.Option temporibus provident qui doloribus beatae laboriosam ipsam id praesentium excepturi minima!"
+            " Market Volatility: Unpredictable market conditions amplify risk, challenging investors to make informed decisions amidst uncertainty."
           }
         />
       </div>

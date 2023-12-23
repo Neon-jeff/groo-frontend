@@ -61,7 +61,7 @@ export default function InvestmentHistory() {
           className={`grid ${arr.length == 1 ? "grid-cols-1" : ""} ${
             arr.length == 2 ? "grid-cols-2" : ""
           } ${
-            arr.length == 3 ? "grid-cols-3 max-sm:grid-cols-2" : ""
+            arr.length >= 3 ? "grid-cols-3 max-sm:grid-cols-2" : ""
           } gap-10 text-sm place-items-center w-full`}
         >
           {arr.length > 0 &&

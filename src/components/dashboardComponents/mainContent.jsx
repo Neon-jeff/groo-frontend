@@ -56,16 +56,16 @@ export default function MainContent({showMobile,mobile}) {
             <span className="text-md font-semibold text-green-600">$16000</span>
           </p>
         </div>
-        <button className=" w-3/12 max-sm:w-1/2  self-end  text-sm rounded-md text-end">
+        {/* <button className=" w-3/12 max-sm:w-1/2  self-end  text-sm rounded-md text-end">
           See all investments
-        </button>
+        </button> */}
       </div>
 
       {/* Investment Calculator */}
       <div className="mt-10">
         <h1 className="text-xl max-sm:text-lg font-semibold pb-5 flex items-center gap-2  ">
           <GrGrow size={30} color="#0d3428" />
-          Growth Machine
+          Stems Growth Machine
         </h1>
         <Calculator />
       </div>

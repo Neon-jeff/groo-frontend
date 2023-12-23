@@ -1,11 +1,19 @@
 import React, { useState } from 'react'
 import CalculatorFieldSets from '../CalculatorFields/CalculatorFieldSets';
 import ButtonAuth from '../buttons/buttonLogin'
+import { motion } from 'framer-motion';
 
 export default function Calculator() {
     let [Initial,setInitial]=useState(0)
     let [recurring,setRecurring]=useState(0)
-    let [duration,setDuration]=useState(1)
+    let [duration,setDuration]=useState(0)
+    let [showResult,setShowResult]=useState(false)
+    let [result,setResult]=useState(0)
+
+    let calculateResult=()=>{
+      let result=parseInt(Initial)*1.11 + parseInt(recurring)*parseInt(duration)*1.11
+      setResult(result.toFixed(2))
+    }
   return (
     <div className="bg-white p-5 rounded-md  flex flex-col gap-5">
       <div className=" flex gap-10 max-sm:flex-col">
@@ -13,21 +21,30 @@ export default function Calculator() {
           label={"Initial Payment"}
           min={0}
           max={"100000"}
-          onChange={setInitial}
+          onChange={(e) => {
+            setInitial(e);
+            setShowResult(false);
+          }}
           step={100}
         />
         <CalculatorFieldSets
           label={"Monthly Payment"}
           min={0}
           max={"10000"}
-          onChange={setRecurring}
+          onChange={(e) => {
+            setRecurring(e);
+            setShowResult(false);
+          }}
           step={1}
         />
         <CalculatorFieldSets
           label={"Duration (Months)"}
-          min={1}
+          min={0}
           max={"30"}
-          onChange={setDuration}
+          onChange={(e) => {
+            setDuration(e);
+            setShowResult(false);
+          }}
           step={1}
         />
       </div>
@@ -46,7 +63,23 @@ export default function Calculator() {
         </span>{" "}
         , your income will be .........
       </p>
-      <ButtonAuth width="w-1/4 max-sm:w-1/2" text="Calculate" />
+      {showResult && (
+        <motion.p
+          initial={{ x: -1000, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          className="bg-lime-200 w-1/3 text-md border-[1px] border-black max-sm:w-full p-5 rounded-full font-semibold text-center "
+        >
+          Worth: ${result}
+        </motion.p>
+      )}
+      <ButtonAuth
+        width="w-1/4 max-sm:w-1/2"
+        text="Calculate"
+        action={() => {
+          calculateResult();
+          setShowResult(true);
+        }}
+      />
     </div>
   );
 }

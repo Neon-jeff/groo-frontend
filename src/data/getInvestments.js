@@ -10,7 +10,7 @@ axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
 axios.defaults.withCredentials = true;
 axios.defaults.headers = {
-  "X-CSRFToken": cookie.get("csrftoken"),
+  Authorization: `Token ${JSON.parse(localStorage.getItem("auth"))}`,
 };
 
 const client = axios.create({
