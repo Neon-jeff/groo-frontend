@@ -31,6 +31,7 @@ let login = async (data) => {
         }
       )).then(
         res=>{
+          window.location.reload()
           localStorage.setItem("user", JSON.stringify(res.data));
           userStore.setState({ user: res.data });
           useAuth.setState({ isAuthenticated: true });

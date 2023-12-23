@@ -9,18 +9,21 @@ export default function Benefits() {
       </h1>
       <div className="w-full flex justify-center gap-10 max-sm:flex-col max-sm:w-4/5">
         <FeatureCard
+          head="Strategic Growth Opportunities:"
           text={
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores distinctio iste eum est sint suscipit vel rem recusandae amet!"
+            "Stems Real Estate identifies lucrative investment opportunities, optimizing returns through innovative strategies and market insights"
           }
         />
         <FeatureCard
+          head="Community-Centric Impact:"
           text={
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores distinctio iste eum est sint suscipit vel rem recusandae amet!"
+            " Investing with Stems not only yields financial gains but also contributes to the development of sustainable and vibrant communities."
           }
         />
         <FeatureCard
+          head="Expert Guidance and Transparency:"
           text={
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores distinctio iste eum est sint suscipit vel rem recusandae amet!"
+            " Clients benefit from transparent communication and expert guidance, empowering them with the knowledge to make informed investment decisions for long-term success."
           }
         />
       </div>

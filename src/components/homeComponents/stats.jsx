@@ -9,12 +9,13 @@ export default function Stats() {
         Our number grows rapidly
       </h1>
       <p className="w-1/2 py-5 max-sm:w-full text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni error
-        dolor reiciendis quia incidunt impedit perferendis dolorum aspernatur
-        vero natus.
+        Stems Real Estate has demonstrated remarkable growth, boasting an
+         impressive 40% increase in the past year. This fabricated
+        statistic underscores our commitment to excellence and strategic
+        prowess in the market.
       </p>
       <Button width={"w-1/5 max-sm:w-4/5"} text={"Start Investing"} />
-      <div className="pt-10 flex gap-10 max-sm:flex-col justify-center">
+      {/* <div className="pt-10 flex gap-10 max-sm:flex-col justify-center">
         <FeatureCard
           text={
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni error dolor reiciendis quia incidunt impedit perferendis dolorum aspernatur vero natus."
@@ -30,7 +31,7 @@ export default function Stats() {
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni error dolor reiciendis quia incidunt impedit perferendis dolorum aspernatur vero natus."
           }
         />
-      </div>
+      </div> */}
     </div>
   );
 }

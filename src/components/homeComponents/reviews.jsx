@@ -18,23 +18,35 @@ export default function Reviews() {
             img={img1}
             span={"col-span-2 max-sm:col-span-1"}
             text={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eaque voluptatum at, earum vel suscipit"
+              "Choosing Stems was a game-changer for my real estate journey. Their meticulous house planning impressed me, resulting in a home that perfectly blends functionality and aesthetics"
             }
-            user={{ name: "Maya Daniels", status: "Resident",heading:"Attractive House Planning" }}
+            user={{
+              name: "Maya Daniels",
+              status: "Resident",
+              heading: "Attractive House Planning",
+            }}
           />
           <Reviewscard
             img={img2}
             text={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eaque voluptatum at, earum vel suscipit"
+              "Stems' flexibility in payment methods made my investment journey hassle-free. Their commitment to accommodating individual needs sets them apart. A seamless and convenient experience from start to finish."
             }
-            user={{ name: "Mark Jones", status: "Investor",heading:"Flexible Payment Method" }}
+            user={{
+              name: "Mark Jones",
+              status: "Investor",
+              heading: "Flexible Payment Method",
+            }}
           />
           <Reviewscard
             img={img3}
             text={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eaque voluptatum at, earum vel suscipit"
+              "Stems' futuristic investments redefine the real estate game. Their forward-thinking strategies and cutting-edge projects promise not just returns, but a glimpse into the future of smart, sustainable living"
             }
-            user={{ name: "Jane Collins", status: "Investor",heading:"Futuristic Investment" }}
+            user={{
+              name: "Jane Collins",
+              status: "Investor",
+              heading: "Futuristic Investment",
+            }}
           />
         </div>
       </div>

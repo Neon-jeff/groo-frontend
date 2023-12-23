@@ -29,7 +29,7 @@ export default function Steps() {
     >
       <div className=" flex justify-center gap-0 max-sm:flex-col max-sm:gap-10">
         {/* Sub Hero Text  */}
-        <div className="w-1/2 max-sm:w-full">
+        <div className="w-full max-sm:w-full">
           <h1 className="text-4xl pb-10 font-semibold text-white w-3/4 max-sm:text-2xl max-sm:pb-5 max-sm:w-full">
             A <span className="text-secondary">Duo-Profit</span> ecosystem that
             creates partnership, not tenancy
@@ -42,7 +42,7 @@ export default function Steps() {
         </div>
 
         {/* Icons Avatar Wrapper Container */}
-        <div className="flex flex-col gap-10 w-1/4 relative max-sm:w-4/5 max-sm:pt-10 max-sm:items-center max-sm:mx-auto max-sm:gap-5">
+        {/* <div className="flex flex-col gap-10 w-1/4 relative max-sm:w-4/5 max-sm:pt-10 max-sm:items-center max-sm:mx-auto max-sm:gap-5">
           <p className="absolute text-white bottom-4 left-0 text-[12px] w-1/2 -translate-x-10">
             Lorem ipsum dolor sit, amet consectetur adipisicing.
           </p>
@@ -56,7 +56,7 @@ export default function Steps() {
           <StepIcons icon={group} align={"self-start"} />
           <StepIcons icon={logo} align={"self-center"} />
           <StepIcons icon={home} align={"self-end"} />
-        </div>
+        </div> */}
       </div>
       {/* steps progress wrapper */}
 
@@ -65,15 +65,17 @@ export default function Steps() {
           stepHeader={"Invest with as small as $200"}
           stepNo={"1"}
           stepText={
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nesciunt quae voluptas fugiat obcaecati, error recusandae labore sint repellendus minus earum sed porro inventore nisi at laboriosam dolores placeat ipsum?"
+            "Begin your real estate journey with just $200, diversify wisely with Stems"
           }
           progress={[0.1, 0.5, 1, 0.2]}
         />
         <StepProgress
-          stepHeader={"Residents participates in the \"Live Like You Own it\" Program"}
+          stepHeader={
+            'Residents participates in the "Live Like You Own it" Program'
+          }
           stepNo={"2"}
           stepText={
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nesciunt quae voluptas fugiat obcaecati, error recusandae labore sint repellendus minus earum sed porro inventore nisi at laboriosam dolores placeat ipsum?"
+            "At Stems communities, warmth thrives. Our residents, known for their friendliness and cooperation, create a welcoming atmosphere. Join us in cultivating a neighborhood where connection and collaboration flourish."
           }
           progress={[0.1, 0.5, 1, 0.2]}
         />
@@ -81,7 +83,7 @@ export default function Steps() {
           stepHeader={"Start Creating Wealth"}
           stepNo={"3"}
           stepText={
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nesciunt quae voluptas fugiat obcaecati, error recusandae labore sint repellendus minus earum sed porro inventore nisi at laboriosam dolores placeat ipsum?"
+            "Investing with Stems is a path to wealth creation. Our strategic real estate opportunities harness market growth, maximizing returns and cultivating financial prosperity for savvy investors. Start building your wealth today."
           }
           progress={[0.1, 0.5, 1, 1]}
         />
