@@ -6,11 +6,13 @@ import createInvestment from "../../data/invest";
 import Modal from "../../components/Modal/modal";
 import Loader from "../../components/Modal/modalLoader";
 import { useModal,useLoader } from "../../data/store";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export default function MakePayment() {
   let location = useLocation();
   let [crypto, setCrypto] = useState(true);
   let [reciept, setReciept] = useState(null);
+  let [isCopied,setIsCopied]= useState(false)
   let navigate = useNavigate();
 
   return (
@@ -65,9 +67,14 @@ export default function MakePayment() {
             <div className="flex   flex-row-reverse max-sm:flex-col w-full max-sm:gap-1 justify-center gap-10  items-center">
               <div className="w-full">
                 <p className="font-medium">USDT Address (ERC-20)</p>
-                <p className="bg-blue-100 cursor-pointer mt-3 w-full flex  items-center justify-between text-start rounded-md  p-3">
+                <p className="bg-blue-50 cursor-pointer mt-3 w-full flex  items-center justify-between text-start rounded-md  p-3">
                   0x1d6A91643e8eC808a631e <br /> A407549E47d1A8A95b2
-                  <IoCopyOutline size={20} />
+                  <CopyToClipboard text="0x1d6A91643e8eC808a631eA407549E47d1A8A95b2" onCopy={()=>{
+                    setTimeout(()=>{setIsCopied(false)},1000)
+                    setIsCopied(true)
+                  }}>
+                    <IoCopyOutline size={isCopied?25:20} color={isCopied?"green":"black"} />
+                  </CopyToClipboard>
                 </p>
               </div>
               {/* <p className="font-semibold">OR</p>
@@ -126,7 +133,7 @@ export default function MakePayment() {
                   form.append("image", reciept);
                   form.append("confirmed", false);
                   await createInvestment(form)
-                    .then((data) =>  useLoader.setState({ loader: false }))
+                    .then((data) => useLoader.setState({ loader: false }))
                     .catch((e) => {
                       useLoader.setState({ loader: false });
                       useModal.setState({ modal: true });
