@@ -4,7 +4,10 @@ import ButtonDBoard from "../buttons/buttonDashboard";
 import { IoCloseOutline } from "react-icons/io5";
 import { easeIn, easeOut, motion, AnimatePresence } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
+import { userStore } from "../../data/store";
+import { BsFillPatchCheckFill } from "react-icons/bs";
 export default function AsideMobile({ show, setShow }) {
+    const user = userStore((state) => state.user);
   let navigate=useNavigate()
   return (
     <>
