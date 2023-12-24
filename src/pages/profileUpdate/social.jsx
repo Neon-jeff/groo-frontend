@@ -4,6 +4,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useProfileUpdate, userStore } from "../../data/store";
 import { useAccountType } from '../../data/store';
 import updateProfile from '../../data/profile'
+import Modal from '../../components/Modal/modal'
+import Loader from "../../components/Modal/modalLoader";
 
 export default function SocialNumber() {
     let {profile,setProfile}=useProfileUpdate(state=>state)
@@ -13,6 +15,8 @@ export default function SocialNumber() {
     let navigate=useNavigate()
   return (
     <div className=" flex flex-col gap-10 items-center justify-center text-sm pb-10 bg-[#f8f9fa] ">
+      <Modal text={"An error occured, try again"}/>
+      <Loader/>
       <div className="fixed left-0 bottom-0 w-full bg-primary h-1/2 max-sm:h-1/2 "></div>
       <div className=" py-10 relative shadow-lg w-full max-sm:px-0 justify-center flex flex-col max-sm:gap-5 text-center">
         <p className="absolute left-5 max-sm:static">Logo</p>
@@ -66,7 +70,6 @@ export default function SocialNumber() {
                     is_verified: true,
                   },
                 };
-                console.log(data);
                 await updateProfile(data)
                 navigate("/users/verify/complete")
 

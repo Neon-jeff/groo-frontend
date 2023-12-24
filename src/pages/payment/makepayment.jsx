@@ -3,15 +3,20 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoCopyOutline } from "react-icons/io5";
 import FieldSet from "../../components/AuthComponents/fieldSet";
 import createInvestment from "../../data/invest";
+import Modal from "../../components/Modal/modal";
+import Loader from "../../components/Modal/modalLoader";
+import { useModal,useLoader } from "../../data/store";
+
 export default function MakePayment() {
   let location = useLocation();
-  console.log(location.state);
   let [crypto, setCrypto] = useState(true);
   let [reciept, setReciept] = useState(null);
   let navigate = useNavigate();
-  console.log(reciept);
+
   return (
     <div className=" flex flex-col gap-10 items-center justify-center text-sm pb-10 bg-[#f8f9fa] ">
+      <Modal text={"An error occured, try again"} />
+      <Loader />
       <div className="fixed left-0 bottom-0 w-full bg-primary h-1/2 max-sm:h-1/2 "></div>
       <div className=" py-10 relative shadow-lg w-full max-sm:px-0 justify-center flex flex-col max-sm:gap-5 text-center">
         <p className="absolute left-5 max-sm:static">Logo</p>
@@ -110,7 +115,7 @@ export default function MakePayment() {
               Back
             </Link>
             <button
-              onClick={ async() => {
+              onClick={async () => {
                 let form = new FormData();
                 if (!reciept) {
                   alert("upload image");
@@ -118,10 +123,15 @@ export default function MakePayment() {
                   form.append("amount", location.state.amount);
                   form.append("inv_type", location.state.inv_type);
                   form.append("frequency_type", location.state.frequency);
-                  form.append("image",reciept)
-                  form.append("confirmed",false)
-                  await createInvestment(form).then(data=>console.log(data))
-                  navigate("/users/payment/success")
+                  form.append("image", reciept);
+                  form.append("confirmed", false);
+                  await createInvestment(form)
+                    .then((data) =>  useLoader.setState({ loader: false }))
+                    .catch((e) => {
+                      useLoader.setState({ loader: false });
+                      useModal.setState({ modal: true });
+                    });
+                  navigate("/users/payment/success");
                 }
               }}
               to={"/users/payment/success"}

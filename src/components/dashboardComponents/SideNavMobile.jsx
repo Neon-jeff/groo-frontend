@@ -12,6 +12,7 @@ import { LuMenu } from "react-icons/lu";
 import { easeIn, easeOut, motion,AnimatePresence } from "framer-motion";
 import ProfileCard from "./profileCard";
 import ProfileCardMobileNav from "./profileCardMobileNav";
+import logout from "../../data/logout";
 
 export default function SideNavMobile() {
   let [mNav, setMNav] = useState(false);
@@ -29,8 +30,7 @@ export default function SideNavMobile() {
           }}
         />
 
-          <ProfileCardMobileNav/>
-
+        <ProfileCardMobileNav />
       </div>
       {mNav && (
         <AnimatePresence>
@@ -61,11 +61,17 @@ export default function SideNavMobile() {
             <p>LOGO</p>
             {/* Nav Element */}
             <ul className="text-white flex flex-col gap-8 w-full">
-              <Link to={"/users/dashboard"} className="flex items-center gap-5 ">
+              <Link
+                to={"/users/dashboard"}
+                className="flex items-center gap-5 "
+              >
                 <MdDashboard {...iconProps} />
                 Dashboard
               </Link>
-              <Link to={"/users/investments"} className="flex items-center gap-5 ">
+              <Link
+                to={"/users/investments"}
+                className="flex items-center gap-5 "
+              >
                 <RiBankCardFill {...iconProps} />
                 Investments
               </Link>
@@ -79,7 +85,12 @@ export default function SideNavMobile() {
               <MdEmail {...iconProps} />
               Contact Us
             </Link>
-            <Link className="flex items-center gap-5 w-full text-gray-400 ">
+            <Link
+              className="flex items-center gap-5 w-full text-gray-400"
+              onClick={async () => {
+                await logout();
+              }}
+            >
               <IoLogOut {...iconProps} />
               Logout
             </Link>

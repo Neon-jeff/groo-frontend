@@ -3,6 +3,7 @@ import { userStore } from "./store";
 import axios from "axios";
 import { csrfcookie } from "./token";
 import Cookies from "universal-cookie";
+import { useModal,useLoader } from "./store";
 
 console.log(JSON.parse(localStorage.getItem("auth")));
 
@@ -14,11 +15,11 @@ axios.defaults.headers = {
 };
 
 const client = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: "https://groobackend-production.up.railway.app",
 });
 
 export default async function createInvestment(data) {
-  console.log(csrfcookie());
+    useLoader.setState({ loader: true });
   let res = await client.post("/api/investment/", data, {
     headers: {
       "Authorization": `Token ${JSON.parse(localStorage.getItem("auth"))}`,

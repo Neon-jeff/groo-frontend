@@ -14,7 +14,7 @@ axios.defaults.headers = {
 };
 
 const client = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: "https://groobackend-production.up.railway.app",
 });
 
 export default async function getUserInvestment() {

@@ -5,13 +5,16 @@ import ButtonAuth from '../../components/buttons/buttonLogin';
 import logo from "../../assets/icons/logoSmall.png";
 import login from '../../data/login'
 import { useAuth } from '../../data/store';
+import Modal from '../../components/Modal/modal';
+import Loader from '../../components/Modal/modalLoader';
 export default function Login() {
   let setAuth=useAuth((state)=>state.setAuth)
   let [email,setEmail]=useState('')
   let [password,setPassword]=useState('')
   return (
     <div className=" p-10 h-screen">
-
+      <Modal text={"Invalid login details, check credentials"} showclose={true}/>
+      <Loader/>
       {/* form-container */}
       <div className="mx-auto w-1/3 flex flex-col items-center text-sm max-sm:w-full ">
         <img src={logo} alt="" className='' />

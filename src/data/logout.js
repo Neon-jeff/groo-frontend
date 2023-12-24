@@ -9,16 +9,15 @@ axios.defaults.headers = {
 };
 
 const client = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: "https://groobackend-production.up.railway.app",
 });
 
 let logout = async (data) => {
-  client.get("/api/logout/", data).then(function (res) {
+
         localStorage.removeItem("auth");
         useAuth.setState({ isAuthenticated: false });
         localStorage.removeItem("user");
 
 
-  });
 };
 export default logout;

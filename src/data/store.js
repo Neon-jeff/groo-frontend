@@ -36,11 +36,23 @@ export const useProfileUpdate=create(set=>(
   }
 ))
 
-export const useToken=create(set=>(
+export const useModal=create(set=>(
   {
-    token:"",
-    setProfile:(data)=>{
-      set({token:data})}
+    modal:false,
+    showModal:()=>{
+      set({modal:true})},
+    hideModal:()=>{
+      set({modal:false})}
   }
 ))
+
+export const useLoader = create((set) => ({
+  loader: false,
+  showLoader: () => {
+    set({ modal: true });
+  },
+  hideLoader: () => {
+    set({ modal: false });
+  },
+}));
 const useInvestment=null

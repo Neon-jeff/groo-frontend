@@ -4,6 +4,9 @@ import FieldSet from "../../components/AuthComponents/fieldSet";
 import ButtonAuth from "../../components/buttons/buttonLogin";
 import logo from "../../assets/icons/logoSmall.png";
 import register from "../../data/auth";
+import Modal from "../../components/Modal/modal";
+import Loader from "../../components/Modal/modalLoader";
+import { useModal } from "../../data/store";
 
 export default function SignUp() {
   let [first_name, setFname] = useState("");
@@ -11,8 +14,12 @@ export default function SignUp() {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
   let [confirm, setConfirm] = useState("");
+
+  let{showModal}=useModal(state=>state)
   return (
-    <div className=" p-10 h-full">
+    <div className=" p-10 h-full max-sm:h-screen">
+      <Modal text={password==confirm?"Account with email already exists":"Passwords do not match"}/>
+      <Loader/>
       {/* form-container */}
       <div className="mx-auto w-1/3 flex flex-col items-center text-sm max-sm:w-full ">
         <img src={logo} alt="" className="" />
@@ -28,7 +35,12 @@ export default function SignUp() {
         <form action="" method="post" className="w-full pt-5" onSubmit={async(e)=>{
           e.preventDefault()
           let data={first_name,last_name,email,password}
-          await register(data)
+          if(password!=confirm){
+            showModal()
+          }
+          else{
+            await register(data);
+          }
         }}>
           {/* Names container */}
           <div className="w-full flex flex-col gap-3">

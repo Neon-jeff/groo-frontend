@@ -27,34 +27,28 @@ export default function AccountType() {
       </div>
       <div className="flex w-full justify-center max-sm:px-5 gap-10 max-sm:mt-5 ">
         <div
-          className={`bg-dash h-56 w-1/4 max-sm:w-1/2 flex flex-col items-center justify-center rounded-md border-[1px] border-black z-[1] p-10 max-sm:p-5 ${
+          className={`bg-dash h-56 w-1/4 max-sm:w-1/2 flex flex-col items-center justify-center rounded-md  border-black z-[1] p-10 max-sm:p-5 ${
             isIndividual
-              ? "border-4 border-secondary"
-              : ""
+              ? " border-[3px] border-secondary"
+              : "border-[1px] border-black"
           } text-center`}
           onClick={setIndividual}
         >
           <p className="font-semibold">Individual</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-            repudiandae.
-          </p>
+          <p>Personal account for your investments</p>
         </div>
         <div
-          className={`bg-dash h-56 w-1/4 max-sm:w-1/2 flex flex-col items-center justify-center rounded-md border-[1px] border-black z-[1] p-10 max-sm:p-5 text-center ${
+          className={`bg-dash h-56 w-1/4 max-sm:w-1/2 flex flex-col items-center justify-center rounded-md  z-[1] p-10 max-sm:p-5 text-center ${
             !isIndividual
-              ? "border-4 border-secondary"
-              : ""
+              ? "border-[3px] border-secondary"
+              : "border-[1px] border-black"
           }`}
-          onClick={()=>{
-            setCustodial()
+          onClick={() => {
+            setCustodial();
           }}
         >
           <p className="font-semibold">Custodial</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-            repudiandae.
-          </p>
+          <p>Account on behalf of another person</p>
         </div>
       </div>
       <p className="flex w-1/2 max-sm:w-full max-sm:px-5 text-secondary items-center gap-5 z-[1] ">
