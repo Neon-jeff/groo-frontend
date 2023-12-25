@@ -26,7 +26,7 @@ export default function FooterContact() {
         <div className="w-[40px] h-[40px] rounded-full flex justify-center items-center bg-white hover:bg-secondary">
           <MdOutlineMail {...iconProps} />
         </div>
-        <p className='text-lime-300 text-sm'>contact@investwithstem.com</p>
+        <p className='text-lime-300 text-sm'>support@investwithstem.com</p>
       </div>
     </div>
   );

@@ -60,8 +60,7 @@ export default function AccountType() {
           }}
         />
         <p>
-          By checking this box you agree to our Terms of Service and Privacy
-          Policy , and our partner Dwolla's Terms of Service and Privacy Policy
+          By checking this box you agree that your informations are safe and not shared to any third party
         </p>
       </p>
       <button

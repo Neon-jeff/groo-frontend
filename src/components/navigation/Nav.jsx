@@ -22,22 +22,16 @@ export default function Nav() {
             Home
           </Link>
           <a
-            href="#"
+            href="/company"
             className="hover:text-green-600 hover:font-medium hover:scale-110 transition duration-75 ease-in"
           >
             About Us
           </a>
           <a
-            href="#"
+            href="/legal"
             className="hover:text-green-600 hover:font-medium hover:scale-110 transition duration-75 ease-in"
           >
             Legals
-          </a>
-          <a
-            href="#"
-            className="hover:text-green-600 hover:font-medium hover:scale-110 transition duration-75 ease-in"
-          >
-            Company
           </a>
         </ul>
         <div className="flex items-center justify-around w-3/12">
@@ -110,23 +104,18 @@ export default function Nav() {
             Home
           </Link>
           <a
-            href="#"
+            href="/company"
             className="hover:text-green-600 hover:font-medium hover:scale-110 transition duration-75 ease-in"
           >
             About Us
           </a>
           <a
-            href="#"
+            href="legal"
             className="hover:text-green-600 hover:font-medium hover:scale-110 transition duration-75 ease-in"
           >
             Legals
           </a>
-          <a
-            href="#"
-            className="hover:text-green-600 hover:font-medium hover:scale-110 transition duration-75 ease-in"
-          >
-            Company
-          </a>
+
           <ButtonOutiline
             text={"Invest Now"}
             action={() => {

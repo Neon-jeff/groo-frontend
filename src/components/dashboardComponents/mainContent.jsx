@@ -36,7 +36,7 @@ export default function MainContent({showMobile,mobile}) {
         <h1 className="text-xl max-sm:text-lg font-semibold">
           Our Funds Status
         </h1>
-        <div className=" p-10 max-sm:p-5 bg-white rounded-3xl max-sm:hidden border-[1px] border-gray-300 flex justify-between max-sm:text-[.9rem] text-sm gap-5  ">
+        <div className=" p-5 max-sm:p-5 bg-white rounded-3xl max-sm:hidden border-[1px] border-gray-300 flex justify-between max-sm:text-[.9rem] text-sm gap-5  ">
           <div className="flex items-center gap-5">
             <img
               src={capital}

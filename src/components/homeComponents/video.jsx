@@ -15,12 +15,20 @@ export default function Video() {
         </p>
         <Button width={"w-1/2"} text={"Invest Now"} />
       </div>
-      <iframe
+      {/* <iframe
         className="bg-white rounded-xl w-3/5 max-sm:w-full h-2/3 max-sm:h-1/3"
         src="https://www.youtube.com/embed/9TXs_0U2758?si=7xEDkx0gpzgepjK3"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
+      ></iframe> */}
+      <iframe
+ className="bg-white rounded-xl w-3/5 max-sm:w-full h-2/3 max-sm:h-1/3"
+        src="https://www.youtube.com/embed/b3x7vpny5jg"
+        title="15 Reasons Why Real Estate is the Best Investment"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
       ></iframe>
     </div>
   );

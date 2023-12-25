@@ -20,6 +20,8 @@ import RedirectAuth from "./components/utils/redirectDashboard";
 import checkAuth from "./data/checkAuth";
 import { useAuth,userStore } from "./data/store";
 import UpdateProfile from "./pages/update-profile/update";
+import Company from "./pages/about/company";
+import Legal from "./pages/about/legal";
 
 
 
@@ -49,6 +51,8 @@ useEffect(()=>{
           {" "}
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/company" element={<Company />} />
+            <Route path="/legal" element={<Legal />} />
             <Route
               path="/users/login"
               element={

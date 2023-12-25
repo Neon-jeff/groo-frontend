@@ -1,9 +1,7 @@
-import React from 'react'
-import Button from '../buttons/button'
-import img from '../../assets/images/image1.jpg'
-import image1 from '../../assets/images/happy-man-with-house-removebg-preview.png'
-import groo from '../../assets/images/groo.png'
-import HeaderImageCard from './headerImageCard';
+import React from "react";
+import Button from "../buttons/button";
+import groo from "../../assets/icons/house1.jpg";
+import HeaderImageCard from "./headerImageCard";
 
 export default function Header() {
   return (
@@ -30,13 +28,17 @@ export default function Header() {
           <img
             src={groo}
             alt=""
-            className="h-[500px] max-sm:w-full w-4/5 object-contain"
+            className="h-[500px] max-sm:w-full w-4/5 object-cover rounded-lg"
           />
-          <HeaderImageCard position={"bottom-10 left-10 max-sm:left-5"} />
+          <HeaderImageCard
+            position={"bottom-10 left-10 max-sm:left-5"}
+            text="Amount Invested in Roots $22,000,000+"
+          />
           <HeaderImageCard
             position={"top-0 right-20 max-sm:right-0 max-sm:left-[45%] "}
+            text="$300,000+ of wealth created for residents"
           />
-          <HeaderImageCard position={"bottom-24 right-0 max-sm:hidden "} />
+          {/* <HeaderImageCard position={"bottom-24 right-0 max-sm:hidden "} /> */}
         </div>
       </main>
     </>
