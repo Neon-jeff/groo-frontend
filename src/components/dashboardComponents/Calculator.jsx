@@ -1,22 +1,26 @@
 import React, { useState } from 'react'
 import CalculatorFieldSets from '../CalculatorFields/CalculatorFieldSets';
 import ButtonAuth from '../buttons/buttonLogin'
-import { motion } from 'framer-motion';
+import { color, motion } from 'framer-motion';
 
-export default function Calculator() {
-    let [Initial,setInitial]=useState(0)
-    let [recurring,setRecurring]=useState(0)
-    let [duration,setDuration]=useState(0)
-    let [showResult,setShowResult]=useState(false)
-    let [result,setResult]=useState(0)
+export default function Calculator({ color = "bg-white" }) {
+  let [Initial, setInitial] = useState(0);
+  let [recurring, setRecurring] = useState(0);
+  let [duration, setDuration] = useState(0);
+  let [showResult, setShowResult] = useState(false);
+  let [result, setResult] = useState(0);
 
-    let calculateResult=()=>{
-      let result=parseInt(Initial)*1.11 + parseInt(recurring)*parseInt(duration)*1.11
-      setResult(result.toFixed(2))
-    }
+  let calculateResult = () => {
+    let result =
+      parseInt(Initial) * 1.11 +
+      parseInt(recurring) * parseInt(duration) * 1.11;
+    setResult(result.toFixed(2));
+  };
   return (
-    <div className="bg-white p-5 rounded-md  flex flex-col gap-5">
-      <div className=" flex gap-10 max-sm:flex-col">
+    <div
+      className={`${color} p-10 rounded-md  flex flex-col justify-center items-center gap-5`}
+    >
+      <div className=" flex gap-10 justify-center max-sm:flex-col">
         <CalculatorFieldSets
           label={"Initial Payment"}
           min={0}

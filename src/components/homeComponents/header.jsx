@@ -32,7 +32,7 @@ export default function Header() {
           />
           <HeaderImageCard
             position={"bottom-10 left-10 max-sm:left-5"}
-            text="Amount Invested in Roots $22,000,000+"
+            text="Amount Invested in Stems $22,000,000+"
           />
           <HeaderImageCard
             position={"top-0 right-20 max-sm:right-0 max-sm:left-[45%] "}

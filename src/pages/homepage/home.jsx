@@ -10,6 +10,8 @@ import Reviews from '../../components/homeComponents/reviews';
 import Faq from '../../components/homeComponents/faqs';
 import Stats from '../../components/homeComponents/stats';
 import Footer from '../../components/navigation/footer';
+import Calculator from '../../components/dashboardComponents/Calculator';
+import HomepageCal from '../../components/homeComponents/homeCal';
 
 export default function Home() {
   return (
@@ -22,6 +24,7 @@ export default function Home() {
       <Steps/>
       <Benefits/>
       <Reviews/>
+      <HomepageCal/>
       <Faq/>
       <Stats/>
       <Footer/>
