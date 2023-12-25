@@ -5,7 +5,6 @@ import { csrfcookie } from "./token";
 import Cookies from "universal-cookie";
 import { useModal,useLoader } from "./store";
 
-console.log(JSON.parse(localStorage.getItem("auth")));
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";

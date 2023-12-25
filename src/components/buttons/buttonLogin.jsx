@@ -4,9 +4,11 @@ export default function ButtonAuth({
   text = "Login",
   width = "w-full",
   action=()=>{},
+  disabled=false
 }) {
   return (
     <button
+      disabled={disabled}
       className={`${width} relative mt-5  h-14 hover:scale-95 transition duration-100 ease-in `}
       onClick={() => {
         if(action){

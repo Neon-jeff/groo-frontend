@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Button from '../buttons/button'
 import ButtonOutiline from '../buttons/buttonOutline';
-import logo from '../../assets/icons/logoSmall.png'
+import logo from '../../assets/images/logo-color.svg'
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Nav() {
@@ -10,9 +10,12 @@ export default function Nav() {
   return (
     <>
       <nav className="flex fixed items-center border-b-[1px] border-black py-3 justify-between px-10 top-0 z-[2] bg-fill w-full max-sm:hidden">
-        <img src={logo} alt="" />
+        <Link to={"/"}>
+          <img src={logo} alt="" className="h-[70px] max-sm:h-[50px]" />
+        </Link>
         <ul className="flex gap-16 text-lg absolute left-1/2 -translate-x-1/2">
-          <Link to={'/'}
+          <Link
+            to={"/"}
             href="#"
             className="hover:text-green-600 hover:font-medium hover:scale-110 transition duration-75 ease-in"
           >
@@ -38,18 +41,27 @@ export default function Nav() {
           </a>
         </ul>
         <div className="flex items-center justify-around w-3/12">
-          <Link to={'/users/login'}
+          <Link
+            to={"/users/login"}
             href="#"
             className="text-green-600 text-xl font-medium hover:scale-110 transition duration-75 ease-in"
           >
             Login
           </Link>
-          <Button text={"Invest Now"} width={"w-6/12"} action={()=>{navigate("/users/signup")}} />
+          <Button
+            text={"Invest Now"}
+            width={"w-6/12"}
+            action={() => {
+              navigate("/users/signup");
+            }}
+          />
         </div>
       </nav>
       <nav className="hidden max-sm:flex p-5 justify-between flex-col backdrop-blur-lg backdrop-opacity-60 gap-16 fixed top-0 right-0 w-full z-[3]  bg-fill items-center">
         <div className="flex justify-between items-center w-full ">
-          <p className="text-lg font-semibold text-primary">Groo</p>
+          <Link to={"/"}>
+            <img src={logo} alt="" className="max-sm:h-[40px]" />
+          </Link>
           <label className="btn btn-circle swap swap-rotate bg-transparent border-0 shadow-none hover:bg-transparent">
             {/* this hidden checkbox controls the state */}
             <input type="checkbox" />
@@ -117,7 +129,9 @@ export default function Nav() {
           </a>
           <ButtonOutiline
             text={"Invest Now"}
-            action={() => {navigate("/users/signup")}}
+            action={() => {
+              navigate("/users/signup");
+            }}
             width={"w-4/5"}
           />
         </ul>

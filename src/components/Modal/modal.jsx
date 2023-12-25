@@ -13,7 +13,7 @@ export default function Modal({text,showclose=true}) {
                   {text}
                 </p>
                 {showclose && (
-                  <button className="bg-saltpan-200 self-end p-3 border-[1px] border-black w-1/4 max-sm:w-11/12 rounded-lg" onClick={()=>{hideModal()}}>
+                  <button className="bg-saltpan-200 self-end p-3 border-[1px] border-black w-1/4 max-sm:w-1/3 rounded-lg" onClick={()=>{hideModal()}}>
                     close
                   </button>
                 )}

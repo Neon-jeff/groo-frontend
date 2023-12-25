@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import FieldSet from "../../components/AuthComponents/fieldSet";
 import ButtonAuth from "../../components/buttons/buttonLogin";
-import logo from "../../assets/icons/logoSmall.png";
+import logo from "../../assets/images/logo-color.svg";
 import register from "../../data/auth";
 import Modal from "../../components/Modal/modal";
 import Loader from "../../components/Modal/modalLoader";
@@ -18,11 +18,19 @@ export default function SignUp() {
   let{showModal}=useModal(state=>state)
   return (
     <div className=" p-10 h-full max-sm:h-screen">
-      <Modal text={password==confirm?"Account with email already exists":"Passwords do not match"}/>
-      <Loader/>
+      <Modal
+        text={
+          password == confirm
+            ? "Account with email already exists"
+            : "Passwords do not match"
+        }
+      />
+      <Loader />
       {/* form-container */}
       <div className="mx-auto w-1/3 flex flex-col items-center text-sm max-sm:w-full ">
-        <img src={logo} alt="" className="" />
+        <Link to={"/"}>
+          <img src={logo} alt="" className="h-[70px] max-sm:h-[50px]" />
+        </Link>
         <h2 className="text-4xl font-semibold text-primary pb-3">
           Create Account
         </h2>
@@ -32,24 +40,52 @@ export default function SignUp() {
             Sign In
           </Link>
         </p>
-        <form action="" method="post" className="w-full pt-5" onSubmit={async(e)=>{
-          e.preventDefault()
-          let data={first_name,last_name,email,password}
-          if(password!=confirm){
-            showModal()
-          }
-          else{
-            await register(data);
-          }
-        }}>
+        <form
+          action=""
+          method="post"
+          className="w-full pt-5"
+          onSubmit={async (e) => {
+            e.preventDefault();
+            let data = { first_name, last_name, email, password };
+            if (password != confirm) {
+              showModal();
+            } else {
+              await register(data);
+            }
+          }}
+        >
           {/* Names container */}
           <div className="w-full flex flex-col gap-3">
             <div className="flex gap-10  max-sm:gap-5">
-              <FieldSet label={"First Name"} type={"text"} name={"fname"} state={first_name} setState={setFname} />
-              <FieldSet label={"Last Name"} type={"text"} name={"lname"} state={last_name} setState={setLname} />
+              <FieldSet
+                label={"First Name"}
+                type={"text"}
+                name={"fname"}
+                state={first_name}
+                setState={setFname}
+              />
+              <FieldSet
+                label={"Last Name"}
+                type={"text"}
+                name={"lname"}
+                state={last_name}
+                setState={setLname}
+              />
             </div>
-            <FieldSet label={"Email"} type={"email"} name={"email"} state={email} setState={setEmail} />
-            <FieldSet label={"Password"} type={"password"} name={"password"} state={password} setState={setPassword} />
+            <FieldSet
+              label={"Email"}
+              type={"email"}
+              name={"email"}
+              state={email}
+              setState={setEmail}
+            />
+            <FieldSet
+              label={"Password"}
+              type={"password"}
+              name={"password"}
+              state={password}
+              setState={setPassword}
+            />
             <FieldSet
               label={"Confirm Password"}
               type={"password"}

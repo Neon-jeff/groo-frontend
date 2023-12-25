@@ -13,6 +13,7 @@ import { easeIn, easeOut, motion,AnimatePresence } from "framer-motion";
 import ProfileCard from "./profileCard";
 import ProfileCardMobileNav from "./profileCardMobileNav";
 import logout from "../../data/logout";
+import logo from "../../assets/images/logo-white.svg";
 
 export default function SideNavMobile() {
   let [mNav, setMNav] = useState(false);
@@ -58,7 +59,9 @@ export default function SideNavMobile() {
                 setMNav(!mNav);
               }}
             />
-            <p>LOGO</p>
+            <Link to={"/"}>
+              <img src={logo} alt="" className="h-[70px] max-sm:h-[50px]" />
+            </Link>
             {/* Nav Element */}
             <ul className="text-white flex flex-col gap-8 w-full">
               <Link
@@ -75,7 +78,7 @@ export default function SideNavMobile() {
                 <RiBankCardFill {...iconProps} />
                 Investments
               </Link>
-              <Link className="flex items-center gap-5">
+              <Link to={"/users/update-profile"} className="flex items-center gap-5">
                 <RiAccountCircleFill {...iconProps} />
                 Account
               </Link>

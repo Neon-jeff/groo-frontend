@@ -20,8 +20,10 @@ export default function MainContent({showMobile,mobile}) {
     <div className=" w-7/12 px-10 py-6 max-sm:px-5 max-sm:w-full mt-28 ">
       {/* Investment Status */}
       <div className="flex flex-col gap-5">
-        <div className='flex justify-between items-center'>
-          <p className='text-2xl font-medium'>Welcome,{profile.user.first_name} </p>
+        <div className="flex justify-between items-center">
+          <p className="text-2xl font-medium">
+            Welcome,{profile.user.first_name}{" "}
+          </p>
           <AiFillAppstore
             className="self-end sm:hidden"
             size={40}
@@ -31,34 +33,108 @@ export default function MainContent({showMobile,mobile}) {
             }}
           />
         </div>
-        <h1 className="text-xl max-sm:text-lg font-semibold">Recent Investment</h1>
-        <div className=" rounded-md flex justify-between max-sm:text-[.9rem] text-sm gap-5 max-sm:grid max-sm:grid-cols-2 max-sm:gap-5 ">
-          <p className="flex flex-col gap-1 shadow-md lg:w-1/4  justify-center bg-white p-5  rounded-lg ">
-            <img src={capital} className="w-[40px]" alt="" />
-            Initial Investment{" "}
-            <span className="text-md font-semibold text-lime-600 ">$500</span>
-          </p>
-          <p className="flex flex-col gap-1  p-5 justify-center lg:w-1/4  rounded-lg shadow-md bg-white">
-            <img src={recurring} className="w-[40px]" alt="" />
-            Monthly Payment{" "}
-            <span className="text-md font-semibold text-sky-600 ">$3000</span>
-          </p>
-          <p className="flex flex-col gap-1 justify-center p-5 lg:w-1/4 rounded-lg shadow-md bg-white">
-            <img src={time} className="w-[40px]" alt="" />
-            Duration{" "}
-            <span className="text-md font-semibold text-yellow-600">
-              19months
-            </span>
-          </p>
-          <p className="flex flex-col gap-1 p-5 justify-center lg:w-1/4 rounded-lg shadow-md bg-white">
-            <img src={profit} className="w-[40px]" alt="" />
-            Expected Income{" "}
-            <span className="text-md font-semibold text-green-600">$16000</span>
-          </p>
+        <h1 className="text-xl max-sm:text-lg font-semibold">
+          Our Funds Status
+        </h1>
+        <div className=" p-10 max-sm:p-5 bg-white rounded-3xl max-sm:hidden border-[1px] border-gray-300 flex justify-between max-sm:text-[.9rem] text-sm gap-5  ">
+          <div className="flex items-center gap-5">
+            <img
+              src={capital}
+              alt=""
+              className="bg-lime-50 rounded-md h-[50px] p-2"
+            />
+            <div>
+              <p>
+                Distributions Last <br /> Quater
+              </p>
+              <p className="text-2xl font-medium">$320,018</p>
+              <p className="text-[.7rem] text-lime-600">payout of $1.80/unit</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-5">
+            <img
+              src={profit}
+              alt=""
+              className="bg-lime-50 rounded-md h-[50px] p-2"
+            />
+            <div>
+              <p>
+                Annualized <br /> Returns
+              </p>
+              <p className="text-2xl font-medium">%16</p>
+              <p className="text-[.7rem] text-lime-600">
+                istorical performance
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-5">
+            <img
+              src={recurring}
+              alt=""
+              className="bg-lime-50 rounded-md h-[50px] p-2"
+            />
+            <div>
+              <p>
+                Resident
+                <br /> Impact
+              </p>
+              <p className="text-2xl font-medium">$305,104</p>
+              <p className="text-[.7rem] text-lime-600">saved and invested</p>
+            </div>
+          </div>
         </div>
-        {/* <button className=" w-3/12 max-sm:w-1/2  self-end  text-sm rounded-md text-end">
-          See all investments
-        </button> */}
+        {/* mobile carousel component */}
+        <div className="carousel carousel-center md:hidden bg-white p-10 rounded-2xl border-2">
+          <div className="flex items-center gap-5 carousel-item">
+            <img
+              src={capital}
+              alt=""
+              className="bg-lime-50 rounded-md h-[50px] p-2"
+            />
+            <div>
+              <p>
+                Distributions Last <br /> Quater
+              </p>
+              <p className="text-2xl font-medium">$320,018</p>
+              <p className="text-[.7rem] text-lime-600">payout of $1.80/unit</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-5 carousel-item">
+            <img
+              src={profit}
+              alt=""
+              className="bg-lime-50 rounded-md h-[50px] p-2"
+            />
+            <div>
+              <p>
+                Annualized <br /> Returns
+              </p>
+              <p className="text-2xl font-medium">%16</p>
+              <p className="text-[.7rem] text-lime-600">
+                istorical performance
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-5 carousel-item">
+            <img
+              src={recurring}
+              alt=""
+              className="bg-lime-50 rounded-md h-[50px] p-2"
+            />
+            <div>
+              <p>
+                Resident
+                <br /> Impact
+              </p>
+              <p className="text-2xl font-medium">$305,104</p>
+              <p className="text-[.7rem] text-lime-600">saved and invested</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Investment Calculator */}

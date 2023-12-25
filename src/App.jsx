@@ -19,6 +19,7 @@ import ProtectedRoute from "./components/utils/protected";
 import RedirectAuth from "./components/utils/redirectDashboard";
 import checkAuth from "./data/checkAuth";
 import { useAuth,userStore } from "./data/store";
+import UpdateProfile from "./pages/update-profile/update";
 
 
 
@@ -141,6 +142,14 @@ useEffect(()=>{
               element={
                 <ProtectedRoute>
                   <Investments />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/users/update-profile"
+              element={
+                <ProtectedRoute>
+                  <UpdateProfile />
                 </ProtectedRoute>
               }
             />
