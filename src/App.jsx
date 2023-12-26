@@ -45,7 +45,7 @@ useEffect(()=>{
     <QueryClientProvider client={queryclient}>
       <div
         data-theme="light"
-        className="font-jakata text-md bg-fill overflow-x-hidden w-screen "
+        className="font-jakata text-md bg-fill overflow-x-hidden w-screen scroll-smooth "
       >
         <BrowserRouter>
           {" "}

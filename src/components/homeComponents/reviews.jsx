@@ -6,7 +6,7 @@ import img4 from '../../assets/images/rev4.jpg'
 import Reviewscard from './reviewsCard'
 export default function Reviews() {
   return (
-    <div className="mt-20 p-10  ">
+    <div className="mt-20 p-10" id='reviews'>
       {/* Reviews Wrapper */}
       <div>
         <h1 className="text-5xl max-sm:text-3xl pb-10 font-semibold text-center">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-
+import logo from "../../assets/images/logo-color.svg";
 
 export default function PaymentCheckout() {
   let location=useLocation()
@@ -9,7 +9,9 @@ export default function PaymentCheckout() {
     <div className=" flex flex-col gap-10 items-center justify-center text-sm pb-10 bg-[#f8f9fa] ">
       <div className="fixed left-0 bottom-0 w-full bg-primary h-1/2 max-sm:h-1/2 "></div>
       <div className=" py-10 relative shadow-lg w-full max-sm:px-0 justify-center flex flex-col max-sm:gap-5 text-center">
-        <p className="absolute left-5 max-sm:static">Logo</p>
+        <Link to={"/"}>
+          <img src={logo} alt="" className="h-[70px] max-sm:h-[50px] pl-5" />
+        </Link>
         <div>
           <h1 className="text-2xl font-semibold pb-3 ">Order Summary</h1>
           <p>Step 2</p>
@@ -37,7 +39,11 @@ export default function PaymentCheckout() {
             </p>
             <p className="flex justify-between w-full">
               <span>Total</span>
-              <span className="font-semibold text-green-600">${parseInt(location.state?.amount) + parseInt(0.05*location.state?.amount)}</span>
+              <span className="font-semibold text-green-600">
+                $
+                {parseInt(location.state?.amount) +
+                  parseInt(0.05 * location.state?.amount)}
+              </span>
             </p>
           </div>
 

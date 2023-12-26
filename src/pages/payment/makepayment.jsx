@@ -7,6 +7,7 @@ import Modal from "../../components/Modal/modal";
 import Loader from "../../components/Modal/modalLoader";
 import { useModal,useLoader } from "../../data/store";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import logo from "../../assets/images/logo-color.svg";
 
 export default function MakePayment() {
   let location = useLocation();
@@ -21,10 +22,12 @@ export default function MakePayment() {
       <Loader />
       <div className="fixed left-0 bottom-0 w-full bg-primary h-1/2 max-sm:h-1/2 "></div>
       <div className=" py-10 relative shadow-lg w-full max-sm:px-0 justify-center flex flex-col max-sm:gap-5 text-center">
-        <p className="absolute left-5 max-sm:static">Logo</p>
+        <Link to={"/"}>
+          <img src={logo} alt="" className="h-[70px] max-sm:h-[50px] pl-5" />
+        </Link>
         <div>
           <h1 className="text-2xl font-semibold pb-3 ">Make Payment</h1>
-          <p>Step 2</p>
+          <p>Step 3</p>
         </div>
         <progress
           className="progress progress-success  w-full absolute bottom-0"
@@ -69,11 +72,19 @@ export default function MakePayment() {
                 <p className="font-medium">USDT Address (ERC-20)</p>
                 <p className="bg-blue-50 cursor-pointer mt-3 w-full flex  items-center justify-between text-start rounded-md  p-3">
                   0x1d6A91643e8eC808a631e <br /> A407549E47d1A8A95b2
-                  <CopyToClipboard text="0x1d6A91643e8eC808a631eA407549E47d1A8A95b2" onCopy={()=>{
-                    setTimeout(()=>{setIsCopied(false)},1000)
-                    setIsCopied(true)
-                  }}>
-                    <IoCopyOutline size={isCopied?25:20} color={isCopied?"green":"black"} />
+                  <CopyToClipboard
+                    text="0x1d6A91643e8eC808a631eA407549E47d1A8A95b2"
+                    onCopy={() => {
+                      setTimeout(() => {
+                        setIsCopied(false);
+                      }, 1000);
+                      setIsCopied(true);
+                    }}
+                  >
+                    <IoCopyOutline
+                      size={isCopied ? 25 : 20}
+                      color={isCopied ? "green" : "black"}
+                    />
                   </CopyToClipboard>
                 </p>
               </div>

@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 export default function Nav() {
   let navigate=useNavigate()
     let [mobile,setMobile] = useState(false)
+    let [close,setClose]=useState(false)
   return (
     <>
       <nav className="flex fixed items-center border-b-[1px] border-black py-3 justify-between px-10 top-0 z-[2] bg-fill w-full max-sm:hidden">
@@ -26,6 +27,12 @@ export default function Nav() {
             className="hover:text-green-600 hover:font-medium hover:scale-110 transition duration-75 ease-in"
           >
             About Us
+          </a>
+          <a
+            href="#reviews"
+            className="hover:text-green-600 hover:font-medium hover:scale-110 transition duration-75 ease-in"
+          >
+            Reviews
           </a>
           <a
             href="/legal"
@@ -51,7 +58,7 @@ export default function Nav() {
           />
         </div>
       </nav>
-      <nav className="hidden max-sm:flex p-5 justify-between flex-col backdrop-blur-lg backdrop-opacity-60 gap-16 fixed top-0 right-0 w-full z-[3]  bg-fill items-center">
+      <nav className="hidden max-sm:flex p-5 justify-between flex-col backdrop-blur-lg backdrop-opacity-60 gap-8 fixed top-0 right-0 w-full z-[3]  bg-fill items-center">
         <div className="flex justify-between items-center w-full ">
           <Link to={"/"}>
             <img src={logo} alt="" className="max-sm:h-[40px]" />
@@ -92,7 +99,7 @@ export default function Nav() {
         <ul
           className={
             mobile == true
-              ? "flex gap-10 text-2xl h-screen transition w-full duration-75 ease-in flex-col items-center"
+              ? "flex gap-5 text-lg h-1/2 transition w-full duration-75 ease-in flex-col items-center"
               : "hidden"
           }
         >
@@ -108,6 +115,15 @@ export default function Nav() {
             className="hover:text-green-600 hover:font-medium hover:scale-110 transition duration-75 ease-in"
           >
             About Us
+          </a>
+          <a
+            href="#reviews"
+            className="hover:text-green-600 hover:font-medium hover:scale-110 transition duration-75 ease-in"
+            onClick={() => {
+              setMobile(true);
+            }}
+          >
+            Reviews
           </a>
           <a
             href="legal"
