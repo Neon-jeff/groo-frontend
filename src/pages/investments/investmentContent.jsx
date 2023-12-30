@@ -21,10 +21,10 @@ export default function InvestmentHistory() {
       get()
     },[])
   return (
-    <div className=" h-screen  w-11/12 max-sm:w-full flex gap-5 flex-col items-center">
-      <h1 className="text-xl text-start w-full">Investment History</h1>
+    <div className=" h-screen  w-11/12 max-sm:w-full flex gap-3 flex-col items-center">
+      <h1 className="text-lg text-start font-medium w-full">Investment History</h1>
       {/* investment type-toggle and values */}
-      <div className=" w-full lg:w-full flex flex-col items-center   gap-5 lg:p-8 bg-white p-5 rounded-xl shadow-md ">
+      <div className=" w-full lg:w-full flex flex-col items-center   gap-5 lg:p-8 bg-white p-5 rounded-xl shadow-sm ">
         {/* <h1 className="text-xl font-medium self-start">Investment Type</h1> */}
         {/* toggle payment option*/}
         <div className="flex bg-saltpan-100 p-1  rounded-md w-full">

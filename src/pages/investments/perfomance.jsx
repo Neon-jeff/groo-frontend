@@ -1,6 +1,8 @@
 import React from 'react'
 import { userStore } from '../../data/store';
 import { BsPersonCircle } from "react-icons/bs";
+import Modal from '../../components/Modal/modal';
+import { useModal } from '../../data/store';
 
 
 
@@ -8,13 +10,14 @@ export default function InvestmentPerformance() {
      let { profile } = userStore((state) => state.user);
   return (
     <div className="w-11/12 max-sm:w-full">
-      <h1 className='text-xl pb-3'>Performance</h1>
-      <div className="bg-white shadow-md rounded-xl w-full p-5 flex items-center justify-between">
-        <div className="flex gap-3 max-sm:items-center">
+      <Modal text={"Account Unaccreditated"}/>
+      <h1 className='text-lg pb-2 font-medium'>Performance</h1>
+      <div className="bg-white shadow-sm rounded-xl w-full p-5 flex max-sm:flex-col max-sm:items-start max-sm:gap-4 items-center justify-between">
+        <div className="flex gap-3 max-sm:items-center relative">
           <BsPersonCircle
             size={90}
             color="#ffcf83"
-            className="bg-primary rounded-full p-[1px] max-sm:p-0 max-sm:bg-transparent"
+            className="bg-primary  rounded-full p-[1px] max-sm:p-0 max-sm:bg-transparent"
           />
           <div>
             <p>
@@ -23,11 +26,15 @@ export default function InvestmentPerformance() {
             <p className="text-secondary text-sm font-medium">
               {profile.acct_type}
             </p>
+            <p className='text-red-400 text-[.7rem] pt-3 font-semibold'>not accredited</p>
           </div>
         </div>
-        <div className='self-end  max-sm:w-1/3'>
-          <p className="text-red-300 text-sm text-end max-sm:text-[.6rem] max-sm:text-start">Not Accredited!</p>
-          <p className='text-sm text-green-500 max-sm:hidden'>contact support chat to get accredited</p>
+        <div className='self-start flex flex-col gap-3 pr-10  max-sm:gap-2 w-full'>
+          <p className=" text-sm text-end  max-sm:text-start">Distribution Balance</p>
+          <p className='text-xl font-semibold'>$0.00</p>
+          <button className='bg-primary text-white p-2 rounded-md w-full' onClick={()=>{
+            useModal.setState({modal:true})
+          }}>cash out</button>
         </div>
       </div>
     </div>

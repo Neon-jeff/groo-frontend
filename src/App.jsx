@@ -25,6 +25,7 @@ import Legal from "./pages/about/legal";
 
 
 
+
 const queryclient= new QueryClient()
 function App() {
   let {user,setUser}=userStore(state=>state)
