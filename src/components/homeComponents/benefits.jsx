@@ -9,21 +9,22 @@ export default function Benefits() {
       </h1>
       <div className="w-full flex justify-center gap-10 max-sm:flex-col max-sm:w-4/5">
         <FeatureCard
-          head="Strategic Growth Opportunities:"
+          head="Start with $100"
           text={
-            "Stems Real Estate identifies lucrative investment opportunities, optimizing returns through innovative strategies and market insights"
+            "Non-accredited and accredited investors can get started with only $100."
           }
         />
         <FeatureCard
-          head="Community-Centric Impact:"
+          head="Quarterly Liquidity:"
           text={
-            " Investing with Stems not only yields financial gains but also contributes to the development of sustainable and vibrant communities."
+            " Stems offers investors liquidity every quarter, not common for private real estate investments."
           }
         />
         <FeatureCard
-          head="Expert Guidance and Transparency:"
+          head="Low Fees
+:"
           text={
-            " Clients benefit from transparent communication and expert guidance, empowering them with the knowledge to make informed investment decisions for long-term success."
+            " Only a $5 platform fee to get started and no fees to cash out after the first year."
           }
         />
       </div>

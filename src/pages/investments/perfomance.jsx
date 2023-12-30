@@ -17,7 +17,7 @@ export default function InvestmentPerformance() {
           <BsPersonCircle
             size={90}
             color="#ffcf83"
-            className="bg-primary  rounded-full p-[1px] max-sm:p-0 max-sm:bg-transparent"
+            className=" rounded-full p-[1px] max-sm:p-0 max-sm:bg-transparent"
           />
           <div>
             <p>
@@ -29,7 +29,7 @@ export default function InvestmentPerformance() {
             <p className='text-red-400 text-[.7rem] pt-3 font-semibold'>not accredited</p>
           </div>
         </div>
-        <div className='self-start flex flex-col gap-3 pr-10  max-sm:gap-2 w-full'>
+        <div className='self-start flex flex-col gap-3 pr-10  max-sm:gap-2 max-sm:w-full'>
           <p className=" text-sm text-end  max-sm:text-start">Distribution Balance</p>
           <p className='text-xl font-semibold'>$0.00</p>
           <button className='bg-primary text-white p-2 rounded-md w-full' onClick={()=>{
