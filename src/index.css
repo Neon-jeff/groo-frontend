@@ -5,4 +5,27 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+/* Firefox */
+/* * {
+  scrollbar-width: thin;
+  scrollbar-color: orange;
+}
+
+/* Chrome, Edge, and Safari */
+/* *::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: darkgreen;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color:
+#ffcf83;
+  border-radius: 14px;
+
+} */ 

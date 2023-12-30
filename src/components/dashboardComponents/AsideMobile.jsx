@@ -6,6 +6,12 @@ import { easeIn, easeOut, motion, AnimatePresence } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 import { userStore } from "../../data/store";
 import { BsFillPatchCheckFill } from "react-icons/bs";
+import capital from "../../assets/icons/money.png";
+import coin from "../../assets/icons/coin.png";
+import house from "../../assets/icons/investment.png";
+import handshake from "../../assets/icons/handshake.png";
+import roi from "../../assets/icons/return-of-investment.png";
+
 export default function AsideMobile({ show, setShow }) {
     const user = userStore((state) => state.user);
   let navigate=useNavigate()
@@ -71,6 +77,77 @@ export default function AsideMobile({ show, setShow }) {
                 </Link>
               </div>
             )}
+          </div>
+
+          {/* price status, to encourage customers */}
+          <div className="w-full p-5 h-72 bg-transparent flex flex-col gap-8 rounded-lg overflow-scroll">
+            <div className="flex items-center gap-5">
+              <img
+                src={coin}
+                alt=""
+                className="bg-lime-50 rounded-md h-[50px] p-2"
+              />
+              <div>
+                <p>
+                  Price per <br /> unit
+                </p>
+                <p className="text-2xl font-medium">$120.00</p>
+                <p className="text-[.7rem] text-lime-600">
+                  payout of $1.80/unit
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-5">
+              <img
+                src={house}
+                alt=""
+                className="bg-lime-50 rounded-md h-[50px] p-2"
+              />
+              <div>
+                <p>
+                  Total properties <br /> owned
+                </p>
+                <p className="text-2xl font-medium">70</p>
+                <p className="text-[.7rem] text-lime-600">
+                  20 homes purchased last quater
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-5">
+              <img
+                src={handshake}
+                alt=""
+                className="bg-lime-50 rounded-md h-[50px] p-2"
+              />
+              <div>
+                <p>
+                  Occupancy rate <br />
+                </p>
+                <p className="text-2xl font-medium">97%</p>
+                {/* <p className="text-[.7rem] text-lime-600">
+                  payout of $1.80/unit
+                </p> */}
+              </div>
+            </div>
+
+            <div className="flex items-center gap-5">
+              <img
+                src={roi}
+                alt=""
+                className="bg-lime-50 rounded-md h-[50px] p-2"
+              />
+              <div>
+                <p>
+                  Target returns <br />
+                </p>
+                <p className="text-2xl font-medium">12%-15%</p>
+                {/* <p className="text-[.7rem] text-lime-600">
+                  payout of $1.80/unit
+                </p> */}
+              </div>
+            </div>
           </div>
           <ButtonDBoard width="w-full max-sm:w-1/2" />
         </motion.div>
