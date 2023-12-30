@@ -80,10 +80,10 @@ export default function AsideMobile({ show, setShow }) {
           </div>
 
           {/* price status, to encourage customers */}
-          <div className="w-full p-5 h-72 bg-transparent flex flex-col gap-8 rounded-lg overflow-scroll">
+          <div className="w-full p-5 h-72 bg-transparent flex flex-col gap-6 rounded-lg overflow-scroll">
             <div className="flex items-center gap-5">
               <img
-                src={coin}
+                src={capital}
                 alt=""
                 className="bg-lime-50 rounded-md h-[50px] p-2"
               />
@@ -93,8 +93,25 @@ export default function AsideMobile({ show, setShow }) {
                 </p>
                 <p className="text-2xl font-medium">$120.00</p>
                 <p className="text-[.7rem] text-lime-600">
-                  payout of $1.80/unit
+                  +1.6% from the last quater
                 </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-5">
+              <img
+                src={coin}
+                alt=""
+                className="bg-lime-50 rounded-md h-[50px] p-2"
+              />
+              <div>
+                <p>
+                  Net asset <br /> value
+                </p>
+                <p className="text-2xl font-medium">$18,175,648</p>
+                {/* <p className="text-[.7rem] text-lime-600">
+                  payout of $1.80/unit
+                </p> */}
               </div>
             </div>
 
