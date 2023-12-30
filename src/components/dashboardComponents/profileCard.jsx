@@ -15,7 +15,7 @@ export default function ProfileCard() {
   return (
     <div className="bg-white flex justify-between items-center p-5 rounded-full w-full">
       <p className="flex items-center gap-2 text-sm">
-        <BsPersonCircle size={25} color="#0d3428" />
+        <BsPersonCircle size={30} color="#ffcf83" className="bg-primary rounded-full p-[1px]" />
         {profile?.user?.first_name} {profile?.user?.last_name}
       </p>
       <div className="dropdown dropdown-bottom dropdown-end">
@@ -26,9 +26,7 @@ export default function ProfileCard() {
           tabIndex={0}
           className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
         >
-          <Link to={"/users/update-profile"}>
-            Change Password
-          </Link>
+          <Link to={"/users/update-profile"}>Change Password</Link>
         </ul>
       </div>
     </div>

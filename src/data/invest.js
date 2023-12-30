@@ -1,8 +1,4 @@
-import { useAuth } from "./store";
-import { userStore } from "./store";
 import axios from "axios";
-import { csrfcookie } from "./token";
-import Cookies from "universal-cookie";
 import { useModal,useLoader } from "./store";
 
 
@@ -13,8 +9,10 @@ axios.defaults.headers = {
   Authorization: `Token ${JSON.parse(localStorage.getItem("auth"))}`,
 };
 
+// https://groobackend-production.up.railway.app
+// http://127.0.0.1:8000/
 const client = axios.create({
-  baseURL: "https://groobackend-production.up.railway.app",
+  baseURL: "http://127.0.0.1:8000",
 });
 
 export default async function createInvestment(data) {

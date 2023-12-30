@@ -16,7 +16,11 @@ export default function ProfileCardMobileNav() {
   return (
     <div className="bg-white flex justify-between items-center p-3 w-1/3 rounded-full ">
       <p className="flex items-center gap-2 text-sm">
-        <BsPersonCircle size={25} color="#0d3428" />
+        <BsPersonCircle
+          size={30}
+          color="#ffcf83"
+          className="bg-primary rounded-full p-[1px]"
+        />
       </p>
       <div className="dropdown dropdown-bottom dropdown-end">
         <div tabIndex={0} role="button" className=" m-1">

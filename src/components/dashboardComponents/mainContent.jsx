@@ -17,7 +17,7 @@ export default function MainContent({showMobile,mobile}) {
     </div>
   }
   return (
-    <div className=" w-7/12 px-10 py-6 max-sm:px-5 max-sm:w-full mt-28 ">
+    <div className=" w-9/12 md:ml-52 px-10 py-6 max-sm:px-5 max-sm:w-full mt-28 ">
       {/* Investment Status */}
       <div className="flex flex-col gap-5">
         <div className="flex justify-between items-center">

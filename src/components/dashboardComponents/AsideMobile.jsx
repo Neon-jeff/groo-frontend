@@ -23,7 +23,7 @@ export default function AsideMobile({ show, setShow }) {
             ease: easeOut,
             duration: 0.3,
           }}
-          className="px-10 pt-20 fixed top-20 bottom-0 md:hidden bg-saltpan-200 rounded-t-3xl h-full w-full flex flex-col gap-5 items-center"
+          className="px-10 pt-20 fixed top-20 bottom-0 md:hidden bg-sub rounded-t-3xl h-full w-full flex flex-col gap-5 items-center"
         >
           <IoCloseOutline
             size={30}
@@ -33,7 +33,7 @@ export default function AsideMobile({ show, setShow }) {
             }}
           />
           <ProfileCard />
-          <div className="w-full flex flex-col gap-5">
+          <div className="w-full flex flex-col gap-5 items-center">
             <h1 className="text-xl font-semibold">Your Account Status</h1>
             <progress
               className="progress progress-success w-56"
@@ -41,7 +41,7 @@ export default function AsideMobile({ show, setShow }) {
               max="100"
             ></progress>
             {user?.profile?.is_verified ? (
-              <div className="bg-green-100  rounded-lg p-3 text-sm flex justify-center items-center gap-3">
+              <div className="bg-green-200  rounded-lg p-3 text-sm flex justify-center items-center gap-3">
                 <BsFillPatchCheckFill color="green" size={30} />
                 <p className="text-md font-medium text-saltpan-500 ">
                   Set up complete!

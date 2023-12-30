@@ -4,6 +4,8 @@ import { IoCopyOutline } from "react-icons/io5";
 import getUserInvestment from '../../data/getInvestments';
 import { MdError } from "react-icons/md";
 import { IoIosCheckmarkCircle } from "react-icons/io";
+import { FaFileDownload } from "react-icons/fa";
+import downloadAgreement from '../../data/download';
 
 export default function InvestmentHistory() {
   let [investments,setInvest]=useState([])
@@ -18,15 +20,14 @@ export default function InvestmentHistory() {
       }
       get()
     },[])
-  console.log(arr);
   return (
-    <div className="bg-dash h-screen mt-36 px-5 w-full flex gap-5 flex-col items-center">
-      <h1 className="text-2xl font-semibold">Investment History</h1>
+    <div className=" h-screen  w-11/12 max-sm:w-full flex gap-5 flex-col items-center">
+      <h1 className="text-xl text-start w-full">Investment History</h1>
       {/* investment type-toggle and values */}
-      <div className=" w-full lg:w-1/2 flex flex-col items-center   gap-5 lg:p-8 bg-saltpan-50 p-5 rounded-md shadow-lg ">
+      <div className=" w-full lg:w-full flex flex-col items-center   gap-5 lg:p-8 bg-white p-5 rounded-xl shadow-md ">
         {/* <h1 className="text-xl font-medium self-start">Investment Type</h1> */}
         {/* toggle payment option*/}
-        <div className="flex bg-gray-200 p-1 shadow-lg rounded-md w-full">
+        <div className="flex bg-saltpan-100 p-1  rounded-md w-full">
           <p
             className={`w-1/2 text-center cursor-pointer ${
               crypto
@@ -58,29 +59,38 @@ export default function InvestmentHistory() {
         </div>
         {/* Payment Cards*/}
         <div
-          className={`grid ${arr.length == 1 ? "grid-cols-1" : ""} ${
-            arr.length == 2 ? "grid-cols-2" : ""
-          } ${
-            arr.length >= 3 ? "grid-cols-3 max-sm:grid-cols-2" : ""
-          } gap-10 text-sm place-items-center w-full`}
+          className={`grid grid-cols-1 gap-10 text-sm place-items-center w-full`}
         >
           {arr.length > 0 &&
             arr.map((item) => (
               <div
-                className={`flex flex-col gap-2 ${
-                  arr.length == 1 ? "w-1/2" : "w-full"
-                } border-[1px] border-black items-center bg-saltpan-100  p-8 rounded-md justify-between`}
+                className={`flex gap-2 w-full  items-center  bg-gray-50  p-5 rounded-xl justify-between`}
+                key={item.id}
               >
-                <p className="font-semibold text-lg text-green-600">${item.amount}</p>
-                <p className="text-center text-[.7rem]">{item.created}</p>
+                <p className="font-medium text-lg flex flex-col  text-green-600">
+                  ${item.amount}{" "}
+                  <span className="text-center text-black font-light  text-[.8rem]">
+                    {item.created}
+                  </span>
+                </p>
 
-                  {!item.confirmed ? (<MdError color='orange' size={20}/> ): (<IoIosCheckmarkCircle color='green' size={20}/>)}
+                <p className="flex items-center gap-1 cursor-pointer text-blue-500" onClick={async()=>{
+                  await downloadAgreement(item.id)
+                }}>
+                  <FaFileDownload size={15} />
+                  agreement
+                </p>
 
+                {!item.confirmed ? (
+                  <MdError color="orange" size={20} />
+                ) : (
+                  <IoIosCheckmarkCircle color="green" size={20} />
+                )}
               </div>
             ))}
         </div>
 
-        <div className=" px-1 flex w-full text-[.8rem] mt-5 max-sm:gap-5 justify-end gap-5">
+        {/* <div className=" px-1 flex w-full text-[.8rem] mt-5 max-sm:gap-5 justify-end gap-5">
           <Link
             className="text-black text-center  bg-gray-200 w-1/3 max-sm:w-1/2 lg:p-2 p-3 rounded-md"
             to={"/users/dashboard"}
@@ -93,7 +103,7 @@ export default function InvestmentHistory() {
           >
             New Investment
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );

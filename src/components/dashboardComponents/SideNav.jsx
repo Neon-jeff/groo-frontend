@@ -15,7 +15,7 @@ export default function SideNav() {
           size: 30,
         };
   return (
-    <div className=" max-sm:hidden max-sm:top-0 max-sm:h-full max-sm:z-[1] max-sm:fixed max-sm:w-4/5 py-10 px-5 text-sm bg-primary w-2/12 text-white flex flex-col justify-evenly items-center">
+    <div className=" max-sm:hidden max-sm:top-0 max-sm:h-full h-screen fixed max-sm:z-[1] max-sm:fixed max-sm:w-4/5 py-10 px-5 text-sm bg-primary w-2/12 text-white flex flex-col justify-evenly items-center">
       <Link to={"/"}>
         <img src={logo} alt="" className="h-[70px] max-sm:h-[50px]" />
       </Link>

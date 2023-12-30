@@ -5,7 +5,7 @@ import FieldSet from "../../components/AuthComponents/fieldSet";
 import createInvestment from "../../data/invest";
 import Modal from "../../components/Modal/modal";
 import Loader from "../../components/Modal/modalLoader";
-import { useModal,useLoader } from "../../data/store";
+import { useModal, useLoader } from "../../data/store";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import logo from "../../assets/images/logo-color.svg";
 
@@ -13,7 +13,7 @@ export default function MakePayment() {
   let location = useLocation();
   let [crypto, setCrypto] = useState(true);
   let [reciept, setReciept] = useState(null);
-  let [isCopied,setIsCopied]= useState(false)
+  let [isCopied, setIsCopied] = useState(false);
   let navigate = useNavigate();
 
   return (
@@ -144,12 +144,14 @@ export default function MakePayment() {
                   form.append("image", reciept);
                   form.append("confirmed", false);
                   await createInvestment(form)
-                    .then((data) => useLoader.setState({ loader: false }))
+                    .then((data) => {
+                      useLoader.setState({ loader: false });
+                      navigate("/users/payment/success");
+                    })
                     .catch((e) => {
                       useLoader.setState({ loader: false });
                       useModal.setState({ modal: true });
                     });
-                  navigate("/users/payment/success");
                 }
               }}
               to={"/users/payment/success"}
