@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import FieldSet from "../../components/AuthComponents/fieldSet";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useProfileUpdate, userStore } from "../../data/store";
+import { useProfileUpdate, userStore,useLoader,useModal } from "../../data/store";
 import { useAccountType } from '../../data/store';
 import updateProfile from '../../data/profile'
 import Modal from '../../components/Modal/modal'
@@ -75,8 +75,9 @@ export default function SocialNumber() {
                     is_verified: true,
                   },
                 };
-                await updateProfile(data);
-                navigate("/users/verify/complete");
+                await updateProfile(data)
+
+
               }}
               className="text-black z-[1] bg-secondary  max-sm:w-1/2 text-center p-3 lg:p-2 rounded-md "
             >

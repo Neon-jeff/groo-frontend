@@ -5,6 +5,9 @@ import { csrfcookie } from "./token";
 import Cookies from "universal-cookie";
 import { useModal, useLoader } from "./store";
 
+
+
+
 let cookie = new Cookies();
 
 axios.defaults.xsrfCookieName = "csrftoken";
@@ -26,7 +29,7 @@ export default async function updateProfile(data) {
   client
     .patch("/api/profile/", data)
     .then(function (res) {
-      // localStorage.setItem("user", JSON.stringify(res.data));
+    // localStorage.setItem("user", JSON.stringify(res.data));
     })
     .catch((e) => {
       useLoader.setState({ loader: false });
@@ -37,6 +40,7 @@ export default async function updateProfile(data) {
         localStorage.setItem("user", JSON.stringify(res.data));
         userStore.setState({ user: res.data });
         useLoader.setState({ loader: false });
+        window.location.assign("/users/verify/complete")
       })
     );
 }
