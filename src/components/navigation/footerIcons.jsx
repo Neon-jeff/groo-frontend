@@ -2,6 +2,7 @@ import React from 'react'
 import { RiFacebookCircleLine } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
+import { FaTiktok } from "react-icons/fa6";
 
 
 export default function FooterContact() {
@@ -17,16 +18,23 @@ export default function FooterContact() {
         <div className="w-[40px] h-[40px] rounded-full flex justify-center items-center bg-white hover:bg-secondary">
           <FaInstagram {...iconProps} />
         </div>
-        <div className="w-[40px] h-[40px] rounded-full flex justify-center items-center bg-white hover:bg-secondary">
-          <RiFacebookCircleLine {...iconProps} />
-        </div>
+        <a
+          href="https://www.tiktok.com/@investwithstem"
+          target="_blank"
+          className="w-[40px] h-[40px] rounded-full flex justify-center items-center bg-white hover:bg-secondary"
+        >
+          <FaTiktok {...iconProps} />
+        </a>
       </div>
       <p>Contacts</p>
       <div className="grid w-1/12 grid-cols-1 gap-y-2">
-        <div className="w-[40px] h-[40px] rounded-full flex justify-center items-center bg-white hover:bg-secondary">
+        <a
+          href="mailto:support@investwithstem.com"
+          className="w-[40px] h-[40px] rounded-full flex justify-center items-center bg-white hover:bg-secondary"
+        >
           <MdOutlineMail {...iconProps} />
-        </div>
-        <p className='text-lime-300 text-sm'>support@investwithstem.com</p>
+        </a>
+        <p className="text-lime-300 text-sm">support@investwithstem.com</p>
       </div>
     </div>
   );

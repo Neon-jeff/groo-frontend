@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../buttons/button";
-import groo from "../../assets/icons/house1.jpg";
+import groo from "../../assets/images/iphone.png";
 import HeaderImageCard from "./headerImageCard";
 
 export default function Header() {
@@ -28,7 +28,7 @@ export default function Header() {
           <img
             src={groo}
             alt=""
-            className="h-[500px] max-sm:w-full w-4/5 object-cover rounded-lg"
+            className="h-[500px] max-sm:w-full w-4/5 bg-transparent object-contain rounded-lg"
           />
           <HeaderImageCard
             position={"bottom-10 left-10 max-sm:left-5"}

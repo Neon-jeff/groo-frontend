@@ -39,7 +39,10 @@ export default function SideNav() {
           console.log("Baby");
         }}
       />
-      <Link className="flex items-center gap-5 w-full text-secondary">
+      <Link
+        to={"mailto:support@investwithstem.com"}
+        className="flex items-center gap-5 w-full text-secondary"
+      >
         <MdEmail {...iconProps} />
         Contact Us
       </Link>

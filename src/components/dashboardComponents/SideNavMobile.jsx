@@ -78,13 +78,19 @@ export default function SideNavMobile() {
                 <RiBankCardFill {...iconProps} />
                 Investments
               </Link>
-              <Link to={"/users/update-profile"} className="flex items-center gap-5">
+              <Link
+                to={"/users/update-profile"}
+                className="flex items-center gap-5"
+              >
                 <RiAccountCircleFill {...iconProps} />
                 Account
               </Link>
             </ul>
             <ButtonDBoard />
-            <Link className="flex items-center gap-5 w-full text-secondary">
+            <Link
+              to={"mailto:support@investwithstem.com"}
+              className="flex items-center gap-5 w-full text-secondary"
+            >
               <MdEmail {...iconProps} />
               Contact Us
             </Link>
