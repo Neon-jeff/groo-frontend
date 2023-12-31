@@ -10,7 +10,7 @@ export default function Features() {
         <TypeAnimation
           sequence={[
             1000,
-            "Groo brings Investment Solutions to Everyone",
+            "Stem brings Investment Solutions to Everyone",
             1000,
             "Anyone can invest in Real Estates",
             1000,
