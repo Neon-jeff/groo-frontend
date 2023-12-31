@@ -6,6 +6,7 @@ import { MdError } from "react-icons/md";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { FaFileDownload } from "react-icons/fa";
 import downloadAgreement from '../../data/download';
+import Modal from '../../components/Modal/modal'
 
 export default function InvestmentHistory() {
   let [investments,setInvest]=useState([])
@@ -22,6 +23,7 @@ export default function InvestmentHistory() {
     },[])
   return (
     <div className=" h-screen  w-11/12 max-sm:w-full flex gap-3 flex-col items-center">
+      <Modal text={"Download unavailable, try again in a few minutes"}/>
       <h1 className="text-lg text-start font-medium w-full">Investment History</h1>
       {/* investment type-toggle and values */}
       <div className=" w-full lg:w-full flex flex-col items-center   gap-5 lg:p-8 bg-white p-5 rounded-xl shadow-sm ">
