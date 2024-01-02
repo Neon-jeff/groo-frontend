@@ -100,19 +100,29 @@ export default function MakePayment() {
               <div className="flex w-full justify-between">
                 <p>Bank Name</p>
                 <p className="flex gap-3 items-center">
-                  Name of bank <IoCopyOutline size={15} />
+                  Woodforest Bank
+                  {/* <IoCopyOutline size={15} /> */}
                 </p>
               </div>
               <div className="flex w-full justify-between">
-                <p>Bank Number</p>
+                <p>Account Number</p>
                 <p className="flex gap-3 items-center">
-                  00000000 <IoCopyOutline size={15} />
+                  1428420408
+                  {/* <IoCopyOutline size={15} /> */}
                 </p>
               </div>
               <div className="flex w-full justify-between">
-                <p>Bank Name</p>
+                <p>Routing Number</p>
                 <p className="flex gap-3 items-center">
-                  Name of bank <IoCopyOutline size={15} />
+                  044115809
+                  {/* <IoCopyOutline size={15} /> */}
+                </p>
+              </div>
+              <div className="flex w-full justify-between">
+                <p>Bank Address</p>
+                <p className="flex gap-3 items-center">
+                  1000 Chestnut Commons Dr. Elyria, 44035, Ohio
+                  {/* <IoCopyOutline size={15} /> */}
                 </p>
               </div>
             </div>
