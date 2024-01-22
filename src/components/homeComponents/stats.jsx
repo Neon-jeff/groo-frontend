@@ -29,9 +29,9 @@ export default function Stats() {
           }
         />
         <FeatureCard
-          head="Roots fund is up 40%"
+          head="Stems fund is up 40%"
           text={
-            "From April 1, 2021, to October 1, 2023, Roots has experienced a 40% increase in value."
+            "From April 1, 2021, to October 1, 2023, Stems has experienced a 40% increase in value."
           }
         />
       </div>
