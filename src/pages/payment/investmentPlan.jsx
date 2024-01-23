@@ -69,7 +69,7 @@ export default function InvestmentPlan() {
                 state={amount}
                 setState={setAmount}
               />
-              <p className="text-[.8rem]">minimum amount ($100)</p>
+              <p className="text-[.8rem]">minimum amount ($500)</p>
             </div>
             <div>
               <p>price per unit</p>
@@ -95,7 +95,7 @@ export default function InvestmentPlan() {
               Dashboard
             </Link>
             <Link
-              to={amount >= 100 ? "/users/payment/checkout" : null}
+              to={amount >= 500 ? "/users/payment/checkout" : null}
               className="text-black z-[1] bg-secondary w-1/3 max-sm:w-1/2 text-center p-3 lg:p-2 rounded-md "
               state={{
                 amount,
@@ -103,8 +103,8 @@ export default function InvestmentPlan() {
                 inv_type: oneTime ? "onetime" : "recurring",
               }}
               onClick={() => {
-                if (amount < 100) {
-                  alert("minimum capital is $100");
+                if (amount < 500) {
+                  alert("minimum capital is $500");
                 }
               }}
             >
