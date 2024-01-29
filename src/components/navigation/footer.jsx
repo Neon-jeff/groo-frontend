@@ -1,5 +1,5 @@
-import React from 'react'
-import FooterLinks from './footerLinks'
+import React from "react";
+import FooterLinks from "./footerLinks";
 
 export default function Footer() {
   return (
@@ -9,47 +9,40 @@ export default function Footer() {
       {/* Disclaimer Text */}
       <div className="w-1/2 max-sm:w-full">
         <p>
-          Stems Real Estate Investment Policy Introduction: Stems Real Estate
-          recognizes the significance of sound investment policies to ensure
-          sustained growth, risk mitigation, and client satisfaction. This
-          investment policy serves as a guiding framework for our approach to
-          real estate investment. Objective: The primary objective of Stems Real
-          Estate's investment policy is to deliver consistent, long-term returns
-          to our investors while maintaining a prudent risk profile. We aim to
-          achieve this by identifying strategic opportunities, embracing
-          innovation, and adhering to ethical business practices. Investment
-          Philosophy: Stems Real Estate adheres to a balanced and diversified
-          investment philosophy. We believe in the power of strategic
-          diversification across various real estate sectors and geographic
-          locations. Our commitment to thorough research, market analysis, and
-          due diligence underpins every investment decision. Risk Management:
-          Mitigating risk is a cornerstone of our investment policy. Stems Real
-          Estate employs a rigorous risk management framework that includes
-          scenario analysis, stress testing, and continuous monitoring of market
-          dynamics. By staying ahead of potential risks, we aim to protect our
-          investors' capital and enhance the resilience of our portfolio.
-          Transparency and Communication: Stems Real Estate places a premium on
-          transparency and communication. We are committed to providing our
-          investors with clear and comprehensive information regarding their
-          investments. Regular updates, performance reports, and open
-          communication channels ensure that our clients are well-informed and
-          confident in their investment journey. Sustainable and Responsible
-          Investing: Stems Real Estate is dedicated to sustainable and
-          responsible investing. We consider environmental, social, and
-          governance (ESG) factors in our decision-making process. By
-          incorporating ethical practices and supporting environmentally
-          conscious projects, we contribute to the well-being of communities and
-          the planet. Adaptability and Innovation: In a dynamic real estate
-          market, adaptability and innovation are paramount. Stems Real Estate
-          actively embraces technological advancements, market trends, and
-          innovative strategies to stay ahead. Our commitment to continuous
-          improvement ensures that our investment approach remains robust and
-          responsive to evolving market conditions. Conclusion: Stems Real
-          Estate's investment policy reflects our commitment to delivering value
-          to our investors through prudent and forward-thinking strategies. By
-          upholding the principles outlined in this policy, we aim to build
-          enduring relationships, foster community development, and create a
-          legacy of successful real estate investments.
+          STEM, LLC (“stem“) operates a website at www.investwithstem.com and
+          certain mobile apps (the “Platform“). By using the Platform, you
+          accept our Terms of Service and Privacy Policy. All images and return
+          and projection figures shown are for illustrative purposes only, may
+          assume additional investments over time, and are not actual stem
+          customer or model returns or projections. Past performance is no
+          guarantee of future results. Any historical returns, expected returns,
+          or probability projections may not reflect actual future performance.
+          All securities involve risk and may result in partial or total loss.
+          While the data we use from third parties is believed to be reliable,
+          we cannot ensure the accuracy or completeness of data provided by
+          investors or other third parties. Neither stem nor any of its
+          affiliates provide tax advice and do not represent in any manner that
+          the outcomes described herein will result in any particular tax
+          consequence. Prospective investors should confer with their personal
+          tax advisors regarding the tax consequences based on their particular
+          circumstances. Neither stem nor any of its affiliates assume
+          responsibility for the tax consequences for any investor of any
+          investment. Full Disclosure The publicly filed offering circulars of
+          the issuers sponsored by Rise Companies Corp., not all of which may be
+          currently qualified by the Securities and Exchange Commission, may be
+          found at stem.com/oc. For investors and potential investors who
+          are residents of the State of Washington, please send all
+          correspondence, including any questions or comments, to
+          washingtonstate@stem.com. stem takes any potential security
+          issues seriously, and encourages the responsible and timely reporting
+          of unknown security issues. Please send any discovered security
+          concerns to securitydisclosure@stem.com © 2024 stem, LLC. All
+          Rights Reserved. eREIT, eFund and eDirect are trademarks of Rise
+          Companies Corp. Google Play and the Google Play logo are registered
+          trademarks of Google LLC. Apple, the Apple logo and iPhone are
+          registered trademarks of Apple Inc. NerdWallet and the NerdWallet logo
+          are trademarks owned by NerdWallet, Inc. and used with permission.
+          Proudly designed and coded in Washington, D.C.
         </p>
       </div>
       <div></div>
