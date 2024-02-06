@@ -22,7 +22,7 @@ export default function InvestmentHistory() {
       get()
     },[])
   return (
-    <div className=" h-screen  w-11/12 max-sm:w-full flex gap-3 flex-col items-center">
+    <div className=" h-full  w-11/12 max-sm:w-full flex gap-3 flex-col items-center">
       <Modal text={"Download unavailable, try again in a few minutes"}/>
       <h1 className="text-lg text-start font-medium w-full">Investment History</h1>
       {/* investment type-toggle and values */}

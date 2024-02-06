@@ -55,4 +55,8 @@ export const useLoader = create((set) => ({
     set({ modal: false });
   },
 }));
+
+export const useWithdrawal = create((set) => ({
+  data: [],
+}));
 const useInvestment=null

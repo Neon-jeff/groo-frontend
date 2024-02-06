@@ -22,6 +22,7 @@ import { useAuth,userStore } from "./data/store";
 import UpdateProfile from "./pages/update-profile/update";
 import Company from "./pages/about/company";
 import Legal from "./pages/about/legal";
+import WithdrawPage from "./pages/investments/withdrawal";
 
 
 
@@ -155,6 +156,14 @@ useEffect(()=>{
               element={
                 <ProtectedRoute>
                   <UpdateProfile />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/users/withdraw"
+              element={
+                <ProtectedRoute>
+                  <WithdrawPage />
                 </ProtectedRoute>
               }
             />

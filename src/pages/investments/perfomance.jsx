@@ -3,10 +3,12 @@ import { userStore } from '../../data/store';
 import { BsPersonCircle } from "react-icons/bs";
 import Modal from '../../components/Modal/modal';
 import { useModal } from '../../data/store';
+import { useNavigate } from 'react-router-dom';
 
 
 
 export default function InvestmentPerformance() {
+  let navigate=useNavigate()
      let { profile } = userStore((state) => state.user);
   return (
     <div className="w-11/12 max-sm:w-full">
@@ -26,9 +28,15 @@ export default function InvestmentPerformance() {
             <p className="text-secondary text-sm font-medium">
               {profile.acct_type}
             </p>
-            <p className="text-red-400 text-[.7rem] pt-3 font-semibold">
-              not accredited
-            </p>
+            {profile.can_withdraw ? (
+              <p className="text-green-400 text-[.7rem] pt-3 font-semibold">
+                accredited
+              </p>
+            ) : (
+              <p className="text-red-400 text-[.7rem] pt-3 font-semibold">
+                not accredited
+              </p>
+            )}
           </div>
         </div>
         <div className="self-start flex flex-col gap-3 pr-10  max-sm:gap-2 max-sm:w-full">
@@ -38,13 +46,23 @@ export default function InvestmentPerformance() {
           <p className="text-xl font-semibold">${profile.balance}</p>
           <button
             className="bg-primary opacity-80 text-white p-2 rounded-md w-full"
-            onClick={() => {}}
+            onClick={() => {
+              if(profile.can_withdraw){
+                navigate("/users/withdraw")
+              }
+            }}
           >
             cash out
           </button>
-          <p className="text-[.8rem] text-green-500">
-            Unavailable, accredit your account
-          </p>
+            {profile.can_withdraw ? (
+              <p className="text-green-400 text-[.7rem] pt-3 font-semibold">
+                Chose withdrawal method
+              </p>
+            ) : (
+              <p className="text-red-400 text-[.7rem] pt-3 font-semibold">
+                Unavailable, get accredited
+              </p>
+            )}
         </div>
       </div>
     </div>
